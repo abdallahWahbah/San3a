@@ -1,0 +1,170 @@
+.header
+{
+    box-shadow: $shadow-light;
+    background-color: $color-white;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    & > *:not(:last-child)
+    {
+        margin-right: 2.5rem;
+    }
+
+    .logo
+    {
+        width: 3.5rem;
+        height: auto;
+        display: inline-block;
+    }
+
+    &__tutorials
+    {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: inherit;
+
+        &:hover{color: $color-grey-dark-2;}
+    }
+}
+
+
+.section__logo
+{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    min-height: 40vh;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 5rem 0;
+
+    & > * {margin-bottom: 1.7rem;}
+    & > *:not(:first-child){padding-left: 2rem;}
+
+
+    @include respond(tab-land)
+    {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.best__selling, .just__for__you, .more__channels
+{
+    margin-top:2rem;
+
+    .center_button{text-align: center;}
+    
+    .see__more__button
+    {
+        padding: 1.2rem 6rem;
+    }
+
+    @include respond(tab-land)
+    {
+        margin-top:1.5rem;
+    }
+}
+
+.best__selling-page
+{
+    margin-top: 4rem;
+
+    .filter__container
+    {
+        margin-bottom: 5rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .search
+        {
+            flex: 0 1 80% ;
+            &__input
+            {
+                width: 100%;
+                margin-right: 0;
+            }
+            &__button
+            {
+                margin-left: -4rem;
+            }
+            @include respond(tab-land)
+            {
+                flex: 0 1 75%;
+            }
+        }
+        .btn
+        {
+            padding: .5rem 5rem;
+        }
+    }
+
+    .page__no__container
+    {
+        margin: 0 2rem 4rem 6rem;
+
+        display: flex;
+        justify-content: space-evenly;
+
+        a
+        {
+            text-decoration: none;
+            color: $color-primary;
+            transition: all .2s ease-in-out;
+
+            &:hover{transform: translateY(-2px);}
+            &:active, &:visited{transform: translateY(0);}
+
+            &:first-of-type
+            {
+                .page__move{padding: .5rem 4.5rem .5rem 2rem }
+            }
+            &:last-of-type
+            {
+                .page__move{padding: .5rem 2rem .5rem 4.5rem}
+            }
+        }
+        .page__move
+        {
+            background: $color-secondary-light;
+            color: $color-primary;
+            border-radius: 20px;
+            box-shadow: 0 .4rem 3rem rgba(0,0,0, .2);
+            font-size: 1.8rem;
+            font-weight: 700;
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            @include respond(tab-port)
+            {
+                font-size: 1.5rem;
+            }
+
+            &--icon
+            {
+                height: 4rem;
+                width: 4rem;
+                fill: $color-primary;
+
+                @include respond(tab-port)
+                {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                }
+            }
+            &--num
+            {
+                margin-top: -5px;
+
+                @include respond(phone){margin-top: -2px;}
+            }
+        }
+    }
+}

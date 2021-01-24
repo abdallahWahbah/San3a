@@ -1,0 +1,20 @@
+.u-center-text{text-align: center !important;}
+
+.u-margin-bottom-small{margin-bottom: 2rem;}
+.u-margin-bottom-medium{margin-bottom: 4rem;}
+.u-margin-bottom-large{margin-bottom: 8rem;}
+
+
+.u__padding__right__left__medium
+{
+    padding: 0 8rem;
+    @include respond(tab-land)
+    {
+        padding: 0 5rem;
+    }
+}
+
+.u__margin__right__left__medium{margin: 0 8rem;}
+
+
+.u__padding__big__button{padding: 1.2rem 6rem !important;}

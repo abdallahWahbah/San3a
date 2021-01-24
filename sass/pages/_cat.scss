@@ -1,0 +1,90 @@
+.cat
+{
+    &__product
+    {
+        height: 40rem;
+        box-shadow: 0 .2rem 1rem rgba(0,0,0, .2);
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+
+        display: flex; // to center the button 
+        flex-direction: column;
+        align-items: center;
+
+        @include respond(tab-land)
+        {
+            height: 35rem;
+        }
+        @include respond(tab-land)
+        {
+            height: 32rem;
+        }
+
+        & > *:not(:last-child)
+        {
+            margin-bottom: 1rem;
+            
+
+        }
+        & > *:not(:first-child){margin-right: 1rem; margin-left: 1rem;}
+
+        &--img-container
+        {
+            height: 50%;
+        }
+        &--image
+        {
+            height: 100%;
+            width: 100%;
+        }
+        .name__price--container
+        {
+            font-size: 2rem;
+            font-weight: 700;
+            align-self: stretch;
+
+            display: flex;
+            justify-content: space-between;
+
+            @include respond(tab-land)
+            {
+                font-size: 1.7rem;
+            }
+            @include respond(tab-port)
+            {
+                font-size: 1.4rem;
+            }
+        }
+        &--paragraph
+        {
+            font-size: 1.3rem;
+            line-height: 140%;
+            align-self: stretch;
+
+            @include respond(tab-land)
+            {
+                font-size: 1.1rem;
+            }
+            @include respond(tab-land)
+            {
+                font-size: 1rem;
+            }
+        }
+        &--btn
+        {
+            cursor: pointer;
+            text-align: center;
+            position: absolute;
+            bottom: 1rem;
+            .btn
+            {
+                @include respond(tab-land)
+                {
+                    font-size: 1.2rem;
+                    padding: .1rem 1rem;
+                }
+            }
+        }
+    }
+}

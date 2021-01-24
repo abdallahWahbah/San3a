@@ -1,0 +1,109 @@
+.filter
+{
+    padding: 4rem 0;
+
+    & > *:not(:last-child){margin-bottom: 3rem;}
+
+    
+    &__main__text
+    {
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
+    &__label
+    {
+        font-size: 2.5rem;
+        color: $color-grey-dark-2;
+    }
+    .row{margin-bottom: 0;}
+    &__cat--item
+    {
+        color: $color-primary;
+        background: $color-white;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 1rem 1rem;
+        border: 1px solid $color-primary;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &-red
+        {
+            background: $color-primary;
+            color: $color-white;
+        }
+    }
+    &__color
+    {
+        display: flex;
+        & > *
+        {
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            margin-right: 1rem;
+            box-shadow: 0 .2rem 1rem rgba(0,0,0, .2);
+            transition: all .2s ease-in-out;
+        }
+        &-1{background: #005FFF;}
+        &-2{background: #ED5199;}
+        &-3{background: #09CACB;}
+        &-4{background: #F7FF00;}
+        &-5{background: #FF8C69;}
+        &-6{background: #C9C9C9;}
+        &-7{background: #034AA6;}
+    }
+    &__price
+    {
+        display: flex;
+        flex-direction: column;
+
+        &--row
+        {
+            margin-bottom: 1rem;
+
+            display: flex;
+            align-items: center;
+
+            &-label
+            {
+                font-size: 2rem;
+                margin-right: 5rem;
+                flex: 0 1 10%;
+                color: $color-grey-dark-2;
+            }
+            &-val
+            {
+                // flex: 0 1 10%;
+                width: 10%;
+                border-radius: 4px;
+                border: 1px solid $color-black;
+                padding: .2rem 1rem;
+                letter-spacing: 1px;
+
+                &:focus{outline: none;}
+
+                
+
+            }
+            &-val2 // related to max receipt only
+            {
+                width: 5%;
+                border: none;
+
+                @include respond(tab-port)
+                {
+                    width: 10%;
+                }
+            }
+        }
+    }
+    &__buttons
+    {
+        &>*:first-child{margin-right: 2rem;}
+        &>*{cursor: pointer;}
+    }
+}

@@ -1,0 +1,80 @@
+.add
+{
+    padding: 4rem 0;
+
+    @include respond(tab-port)
+    {
+        text-align: center;
+    }
+
+    &__question
+    {
+        font-size: 1.8rem;
+        color: $color-grey-dark-2;
+        margin-bottom: 3rem;
+    }
+    &__form
+    {
+
+        &--row
+        {
+            margin-bottom: 3rem;
+
+            display: flex;
+            align-items: center;
+
+            &-label
+            {
+                font-size: 1.7rem;
+                color: $color-grey-dark-2;
+                margin-right: 3rem;
+                flex: 0 1 17%;
+
+                @include respond(tab-land)
+                {
+                    flex: 0 1 20%;
+                }
+                @include respond(tab-port)
+                {
+                    flex: 0 1 27%;
+                    text-align: left;
+                }
+            }
+            &-input
+            {
+                padding: .5rem .7rem;
+                letter-spacing: 1px;
+                border-radius: .5rem;
+                border: 1px solid $color-grey-dark-1;
+                flex: 0 1 25%;
+
+                &:focus
+                {
+                    outline: none;
+                }
+            }
+            &-cursor
+            {
+                cursor: pointer;
+                font-weight: 700;
+            }
+            &-img
+            {
+                width: 29.5rem;
+                height: 20rem;
+                display: none;
+                border-radius: .5rem;
+            }
+            &-2 // for the last line, to align the image under the text in the same line
+            { 
+                align-items: flex-start;
+            }
+        }
+    }
+    &__buttons
+    {
+        & > *:first-child{margin-right: 3rem;}
+        & > *:last-of-type{padding: .2rem 4rem ;}
+        @include respond(tab-port){text-align: left;}
+    }
+}

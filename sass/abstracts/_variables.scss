@@ -1,0 +1,65 @@
+:root
+{
+    --color-primary: #d94141;
+    --color-primary-light: #e47a7a;
+    --color-primary-dark: #b22424;
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #ccc;
+
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --line: 1px solid var(--color-grey-light-3);
+
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0, .4);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0, .05);
+}
+
+$color-primary: #d94141;
+$color-primary-light: #e47a7a;
+$color-primary-dark: #b22424;
+
+$color-secondary-light: #162f4e;
+$color-secondary: #0B1726;
+$color-secondary-dark: #070f19;
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;     // vertical spaces between each row
+$gutter-vertical-small: 4rem;
+$gutter-horizontal: 6rem;    // horizontal spaces
+$gutter-horizontal-medium: 11rem;
+$gutter-horizontal-big: 23rem;
+
+$color-grey-dark-1: #333;
+$color-grey-dark-2: #777;
+$color-grey-dark-3: #999;
+
+$color-grey-light-1: #faf9f9;
+$color-grey-light-2: #f4f2f2;
+$color-grey-light-3: #ccc;
+
+$color-white: #fff;
+$color-black: #000;
+
+// FONT
+$default-font-size: 1.6rem;
+
+$shadow-dark: 0 1rem 6rem rgba(0,0,0, .4);
+$shadow-medium: 0 .6rem .4rem rgba(0,0,0, .1);
+$shadow-light: 0 .5rem 5rem rgba(0,0,0, .1);
+$shadow-red: 0 .2rem .35rem rgba($color-primary, .9);
+
+// Border
+$border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+
+
+// Social media
+$color-facebook: #255592;
+$color-google: #3F7BE1;
+
+$color-review: #F7FF00;
+

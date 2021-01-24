@@ -1,0 +1,203 @@
+.card
+{
+    color: red;
+    position: relative;
+    perspective: 150rem;
+
+    &__side
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 35rem;
+        backface-visibility: hidden;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: all .8s;
+    
+        &--front
+        {
+            box-shadow: $shadow-medium;
+        }
+
+        &--back
+        {
+            background-image:linear-gradient(to right bottom,
+                                            rgba($color-primary-light, .8),
+                                            rgba($color-primary-dark, .8));
+            transform: rotateY(180deg);
+            position: relative;
+        }
+
+        @include respond(tab-land)
+        {
+            height: 27rem;
+        }
+
+        @include respond(tab-port)
+        {
+            height: 22rem;
+        }
+        
+    }
+
+    &:hover &__side--front
+    {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back
+    {    
+        box-shadow: $shadow-medium;   
+        transform: rotateY(0);
+    }
+    
+
+    // Front side styling
+    &__img__container
+    {
+        height: 80%;
+        margin-bottom: 1rem;
+
+        @include respond(tab-land)
+        {
+            height: 75%;
+            width: 100%;
+        }
+
+        @include respond(tab-port)
+        {
+            height: 70%;
+        }
+    }
+
+    &__img
+    {
+        width: 100%;
+        height: 95%;
+
+        @include respond(tab-land)
+        {
+            height: 100%;
+        }
+    }
+
+    .name__price
+    {
+        padding: 0 1rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        // flex-direction: column;
+
+        .product__price, .product__name
+        {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $color-black;
+
+            @include respond(tab-land)
+            {
+                font-size: 1.7rem;
+            }
+
+            @include respond(tab-port)
+            {
+                font-size: 1.5rem;
+            }
+        }
+
+        @include respond(tab-land)
+        {
+            padding: 0 .8rem;
+            flex-direction: column;
+        }
+    }
+
+
+    // Back side styling
+    &__back__container
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, calc(-50% + 3px)) !important;
+        width: 90%;
+        text-align: center;
+
+    }
+
+    .more__details__text
+    {
+        color: $color-black;
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+
+        @include respond(tab-land)
+        {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .paragraph
+    {
+        color: $color-grey-dark-1;
+        padding-left: 1rem;
+        margin-top: -.2rem;
+        
+        @include respond(tab-land)
+        {
+            margin-top: 0;
+        }
+    }
+
+
+
+
+
+
+
+
+    // putting the back card under front card when in portrait
+    @media only screen and (max-width: 56.25em),
+           only screen and (hover: none)
+    {
+        height: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: $color-grey-light-2;
+
+        &__side
+        {
+            // height: auto;
+            position: relative;
+            box-shadow: none;
+            border-radius: 0;
+            
+            &--back
+            {
+                height: 6rem !important;
+                transform: rotateY(0);
+                // clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+
+        &:hover &__side--front
+        {
+            transform: rotateY(0);
+        }
+        &__img__container{margin-bottom: 0; height: 77%;}
+        &__img{height: 100% !important}
+        &__back__container
+        {
+            // top: 0;
+            // left: 0;
+            transform: translate(0);
+            width: 100%;
+        }
+        .more__details__text{display: none;}
+    }
+    
+}

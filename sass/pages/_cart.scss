@@ -1,0 +1,192 @@
+.cart 
+{
+    padding: 4rem 0;
+
+  &__item 
+  {
+    margin: 2rem 0;
+
+    display: flex;
+    align-items: center;
+
+    & > *:not(:last-child) 
+    {
+      margin-right: 4rem;
+
+      @include respond(tab-port){ margin-right: 2rem; }
+    }
+
+    &--photo 
+    {
+      width: 23rem;
+      height: 23rem;
+      border-radius: 50%;
+      box-shadow: 0 0.4rem 0.7rem rgba(0, 0, 0, 0.2);
+      align-self: center;
+
+      @include respond(tab-port)
+      {
+        height: 18rem;
+        width: 18rem;
+      }
+    }
+
+    &__typo--container 
+    {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      & > *:first-child 
+      {
+        flex: 0 1 30%;
+      }
+      & > *:not(:last-child)
+      {
+          margin-right: 4rem;
+      }
+    }
+
+    &--col-container 
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & > *:first-child 
+      {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $color-grey-dark-2;
+        margin-bottom: 1rem;
+        align-self: flex-start;
+
+        @include respond(tab-port)
+        {
+            font-size: 2rem;
+        }
+      }
+    }
+    /*&--name
+    {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $color-grey-dark-2;
+    }*/
+    &--paragraph 
+    {
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: $color-grey-dark-2;
+
+      @include respond(tab-port)
+    {
+        font-size: 1.1rem;
+    }
+    }
+    &--price, &--quantity, &--total, &--delete
+    {
+        font-size: 2rem;
+        @include respond(tab-port)
+        {
+            font-size: 1.8rem;
+        }
+    }
+    &--quantity 
+    {
+        display: inline-block;
+        padding: .1rem 1.3rem;
+        border: 1px solid $color-black;
+
+        @include respond(tab-port)
+        {
+            padding: .1rem 1rem;
+        }
+    }
+    &--total{color: $color-primary;}
+    &--delete
+    {
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+        &:hover
+        {
+            transform: translateY(-2px);
+        }
+        &:active, &:visited
+        {
+            transform: translateY(0);
+        }
+    }
+  }
+  hr
+  {
+    width: 80%; 
+    margin: 0 0 0 20%; 
+
+    @include respond(tab-port)
+    {
+        width: 75%; 
+        margin: 0 0 0 25%; 
+    }
+  }
+
+  &__total
+  {
+    margin: 3rem 0;
+
+    @include respond(tab-port)
+    {
+        margin: 2rem 0;
+    }
+
+    & > * 
+    {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        & > *:not(:last-child){margin-right: 2rem;}
+    }
+    & > *:not(:last-child)
+    {
+        margin-bottom: 3rem;
+    
+        @include respond(tab-port)
+        {
+            margin-bottom: 2rem;
+        }
+    }
+    &__typo
+    {
+        &--text
+        {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: $color-grey-dark-2;
+
+            @include respond(tab-port)
+            {
+                font-size: 2rem;
+            }
+        }
+        &--value
+        {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: $color-primary;
+            
+            @include respond(tab-port)
+            {
+                font-size: 2rem;
+            }
+        }
+    }
+    &--buttons
+    {
+        & > * {cursor: pointer;}
+    }
+  }
+}

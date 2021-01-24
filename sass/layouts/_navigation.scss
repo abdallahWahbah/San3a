@@ -1,0 +1,106 @@
+.navigation 
+{
+    position: relative;
+    margin-right: 3rem;
+
+    // display: flex;
+    // align-items: center;
+
+    &:first-of-type &__icon {font-size: 3rem;}
+    &:first-of-type &__list{width: 1000%;margin-top: 0.7rem;}
+    &:first-of-type &__background{margin-left: -10rem;}
+    &:last-of-type &__background{margin-top: 1.3rem;}
+
+    &__icon:hover{cursor: pointer;}
+
+    &__icon
+    {
+        font-size: 1.4rem;
+        color: $color-grey-dark-1;
+        transition: all .2s ease-in-out;
+
+        &:hover{color: $color-grey-dark-2;}
+
+    }
+
+    &__background 
+    {
+        position: fixed;
+        width: 140%;
+        height: 100%;
+        background: rgba($color-grey-dark-3, 0.6);
+        margin-left: -120rem;
+
+        z-index: 0;
+        opacity: 0;
+        display: none;
+
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__nav 
+    {
+        position: relative;
+    }
+
+    &__list 
+    {
+        list-style: none;
+        position: absolute;
+        // background: $color-secondary-light;
+        background: white;
+        z-index: 1000;
+        margin-top: 1.7rem;
+        padding: 0.5rem;
+        width: 300%;
+        border-radius: 4px;
+        box-shadow: $shadow-light;
+
+        transform: scale(0);
+
+        transition: all 0.2s ease-in-out;   
+    }
+    &__item 
+    {
+        margin: 0;
+        padding: .5rem 1rem;
+        cursor: pointer;
+
+        /* border-bottom: 1px solid rgba(128, 128, 128, 0.5); // the commented code is the same as (-lined, :not(:last-child))
+        &:last-child 
+        {
+            border: none;
+        }*/
+
+        &-lined
+        {
+            border-bottom: $border-bottom;
+            padding-bottom: 1.2rem;
+        }
+
+        &:not(:last-child)
+        {
+            margin-bottom: .3rem;
+            display: block;
+        }
+    }
+
+    &__link 
+    {
+        text-decoration: none;
+        color: $color-grey-dark-3;
+        font-size: 1.3rem;
+        font-weight: 400;
+        transition: all 0.2s ease-in-out;
+
+        &:hover 
+        {
+            color: $color-grey-dark-2;
+        }
+    }
+
+    // Functionality
+    .list__active{transform: scale(1);}
+    .background__opacity{opacity: 1; display: block;} 
+
+}

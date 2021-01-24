@@ -1,0 +1,70 @@
+.payment
+{
+    padding: 4rem 0;
+    text-align: center;
+    
+    & > *:not(:last-child){margin-bottom: 3rem;}
+
+    &__photo
+    {
+        width: 20%;
+    }
+    &__text
+    {
+        font-size: 3rem;
+        letter-spacing: 1px;
+        font-weight: 700;
+        @include respond(tab-port){font-size: 2.5rem;}
+    }
+
+    &__form
+    {
+        display: flex;
+
+        @include respond(tab-port){justify-content: center;}
+
+        &--text
+        {
+            margin-right: 4rem;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            & >*:not(:last-of-type){margin-bottom: 3rem;}
+
+            &-label
+            {
+                font-size: 2.3rem;
+                color: $color-grey-dark-2;
+            }
+        }
+        &--input
+        {
+            display: flex;
+            flex-direction: column; 
+
+            & >*:not(:last-of-type){margin-bottom: 2.4rem;}
+
+            &-item
+            {
+                padding: 1rem 1.5rem;
+                font-size: 1.6rem;
+                letter-spacing: .5px;
+                border-radius: 10px;
+                border: 1px solid $color-grey-dark-2;
+                box-shadow: 0 .5rem 1rem rgba($color-black, .1);
+                &:focus{outline: none;}
+            }
+        }
+    }
+    &__buttons
+    {
+        display: flex;
+
+        & > *:not(:last-of-type){margin-right: 2rem;}
+        & > * {cursor: pointer;}
+
+        @include respond(tab-port){justify-content: center;}
+    }
+}
