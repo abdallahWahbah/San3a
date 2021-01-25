@@ -585,6 +585,35 @@ body {
     opacity: 1;
     display: block; }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(231, 229, 229, 0.98) !important;
+  z-index: 99999999999999;
+  transition: all .2s ease-in-out;
+  animation: smoothScroll 1s; }
+
+.sticky ~ .section__logo {
+  margin-top: 13rem !important; }
+
+.sticky ~ .best__selling-page {
+  margin-top: 9rem !important; }
+
+.sticky ~ .add,
+.sticky ~ .cart,
+.sticky ~ .checkout,
+.sticky ~ .filter,
+.sticky ~ .payment,
+.sticky ~ .product {
+  padding: 9rem 0 !important; }
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-4rem); }
+  100% {
+    transform: translateY(0px); } }
+
 .section__logo {
   background: red;
   min-width: 90vh;
@@ -1032,6 +1061,7 @@ body {
     cursor: pointer; }
 
 .product {
+  padding: 4rem 0;
   display: flex;
   flex-direction: column; }
   .product > * {
@@ -1039,7 +1069,8 @@ body {
   .product > *:first-child {
     margin: 4rem 0 2rem 0; }
   .product .heading__secondary {
-    align-self: start; }
+    align-self: start;
+    margin-top: 0rem; }
   .product__img__container {
     height: 81vh;
     margin: 0 9rem;
@@ -1118,13 +1149,14 @@ body {
   box-shadow: 0 0.5rem 5rem rgba(0, 0, 0, 0.1);
   background-color: #fff;
   width: 100%;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between; }
   .header > *:not(:last-child) {
     margin-right: 2.5rem; }
   .header .logo {
-    width: 3.5rem;
+    width: 8rem;
     height: auto;
     display: inline-block; }
   .header__tutorials {

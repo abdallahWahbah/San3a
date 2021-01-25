@@ -159,3 +159,18 @@ var removeColorClassDecreaseOpacity = () =>
         el.style.opacity=".2";
     });
 }
+
+
+// --------------------------- Stichy header --------------------------- 
+$(document).ready(function()
+{
+    $('.header').waypoint(function(direction)
+    {
+        if($(".header"))
+        {
+            if (direction == "down") $('.header').addClass('sticky');
+            else $('.header').removeClass('sticky');
+        }
+    },{offset:"-60px"})
+});
+

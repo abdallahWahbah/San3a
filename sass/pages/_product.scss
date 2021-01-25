@@ -1,5 +1,7 @@
 .product
 {
+    padding: 4rem 0;
+
     display: flex;
     flex-direction: column;
 
@@ -7,7 +9,11 @@
     & > *:first-child{margin: 4rem 0 2rem 0;}
 
 
-    .heading__secondary{align-self: start;}
+    .heading__secondary
+    {
+        align-self: start;
+        margin-top: 0rem;
+    }
     &__img__container
     {
         height: 81vh;
