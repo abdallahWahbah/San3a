@@ -235,6 +235,9 @@ body {
   .search__icon {
     height: 2rem;
     width: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .search {
+      flex: 0 1 50%; } }
 
 .card {
   color: red;
@@ -522,8 +525,6 @@ body {
     margin-top: 0.7rem; }
   .navigation:first-of-type .navigation__background {
     margin-left: -10rem; }
-  .navigation:last-of-type .navigation__background {
-    margin-top: 1.3rem; }
   .navigation__icon:hover {
     cursor: pointer; }
   .navigation__icon {
@@ -534,7 +535,7 @@ body {
       color: #777; }
   .navigation__background {
     position: fixed;
-    width: 140%;
+    width: 500%;
     height: 100%;
     background: rgba(153, 153, 153, 0.6);
     margin-left: -120rem;
@@ -542,6 +543,8 @@ body {
     opacity: 0;
     display: none;
     transition: all 0.2s ease-in-out; }
+    .navigation__background-2 {
+      margin-top: 1.5rem; }
   .navigation__nav {
     position: relative; }
   .navigation__list {
@@ -589,7 +592,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(231, 229, 229, 0.98) !important;
+  box-shadow: 0 1rem 6rem rgba(0, 0, 0, 0.4) !important;
   z-index: 99999999999999;
   transition: all .2s ease-in-out;
   animation: smoothScroll 1s; }
@@ -1157,7 +1160,7 @@ body {
     margin-right: 2.5rem; }
   .header .logo {
     width: 8rem;
-    height: auto;
+    height: 5rem;
     display: inline-block; }
   .header__tutorials {
     text-decoration: none;
@@ -1165,6 +1168,23 @@ body {
     color: inherit; }
     .header__tutorials:hover {
       color: #777; }
+  .header__main--profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .header__main--profile > * {
+      cursor: pointer; }
+    .header__main--profile > *:not(:last-child) {
+      height: 2.5rem;
+      width: 2.5rem;
+      margin-right: 1.5rem; }
+    .header__main--profile-img {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      border: 1px solid #ccc; }
+  .header__hide {
+    display: none; }
 
 .section__logo {
   margin-top: 8rem;

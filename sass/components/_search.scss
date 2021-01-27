@@ -64,4 +64,9 @@
         width: 2rem;
     }
 
+    @include respond (tab-port)
+    {
+        flex: 0 1 50%;
+    }
+
 }

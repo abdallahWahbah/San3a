@@ -9,7 +9,6 @@
     align-items: center;
     justify-content: space-between;
 
-
     & > *:not(:last-child)
     {
         margin-right: 2.5rem;
@@ -18,7 +17,7 @@
     .logo
     {
         width: 8rem;
-        height: auto;
+        height: 5rem;
         display: inline-block;
     }
 
@@ -30,6 +29,32 @@
 
         &:hover{color: $color-grey-dark-2;}
     }
+
+    &__main--profile
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > * {cursor: pointer;}
+        & > *:not(:last-child)
+        {
+            height: 2.5rem;
+            width: 2.5rem;
+            margin-right: 1.5rem;
+        }
+        &-img
+        {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            border: 1px solid $color-grey-light-3;
+        }
+        
+        
+    }
+
+    &__hide{display: none;}
 }
 
 

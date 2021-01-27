@@ -174,3 +174,31 @@ $(document).ready(function()
     },{offset:"-60px"})
 });
 
+
+// --------------------------- Header hide items --------------------------- 
+var loginState = "logged"; // logged - notLogged
+let headerHideItems = (element) =>
+{
+    if(element)
+    {
+        if(!element.classList.contains("header__hide"))
+        element.classList.add("header__hide");
+    }
+}
+if(loginState === "notLogged")
+{
+    // var profileNav = document.querySelector(".js--header__profile--nav");
+    // var profileMain = document.querySelector(".js--header__main--profile");
+    // headerHideItems(profileNav);
+    // headerHideItems(profileMain);
+    var items = Array.from(document.querySelectorAll(".js--header__profile--nav, .js--header__main--profile"));
+    items.forEach(el =>
+    {
+       headerHideItems(el);
+    });
+}
+else if(loginState === "logged")
+{
+    var profileLogin = document.querySelector(".js__header--login");
+    headerHideItems(profileLogin);
+}

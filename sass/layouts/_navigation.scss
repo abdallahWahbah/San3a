@@ -9,7 +9,7 @@
     &:first-of-type &__icon {font-size: 3rem;}
     &:first-of-type &__list{width: 1000%;margin-top: 0.7rem;}
     &:first-of-type &__background{margin-left: -10rem;}
-    &:last-of-type &__background{margin-top: 1.3rem;}
+    // &:last-of-type &__background{margin-top: 1.3rem;}
 
     &__icon:hover{cursor: pointer;}
 
@@ -26,7 +26,7 @@
     &__background 
     {
         position: fixed;
-        width: 140%;
+        width: 500%;
         height: 100%;
         background: rgba($color-grey-dark-3, 0.6);
         // background: rgba(231, 229, 229, 0.5);
@@ -37,6 +37,7 @@
         display: none;
 
         transition: all 0.2s ease-in-out;
+        &-2{margin-top: 1.5rem;}
     }
 
     &__nav 
@@ -111,11 +112,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(231, 229, 229, 0.98) !important;
+    box-shadow: $shadow-dark !important;
     z-index: 99999999999999;
     transition: all .2s ease-in-out;
     animation: smoothScroll 1s;
 }
+
 .sticky ~ .section__logo {margin-top: 13rem !important;}
 
 .sticky ~ .best__selling-page {margin-top: 9rem !important;}

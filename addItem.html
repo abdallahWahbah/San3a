@@ -16,7 +16,7 @@
     <!--pages/home, base/utilities-->
     <header class="header u__padding__right__left__medium">
         <!--layouts/navigation-->
-        <div class="navigation">
+        <div class="navigation js--header__profile--nav">
             <span class="navigation__icon js__navigation__icon-1">&equiv;</span>
             <div class="navigation__background">&nbsp;</div>
             <nav class="navigation__nav">
@@ -53,7 +53,7 @@
         <!--layouts/navigation-->
         <div class="navigation">
             <span class="navigation__icon js__navigation__icon-2">Categories</span>
-            <div class="navigation__background">&nbsp;</div>
+            <div class="navigation__background navigation__background-2">&nbsp;</div>
             <nav class="navigation__nav">
                 <ul class="navigation__list">
                     <li class="navigation__item"><a href="#" class="navigation__link">Glass industry</a></li>
@@ -76,9 +76,21 @@
             </nav>
         </div>
     
-        <a href="#" class="btn btn--white">Login</a>
+        <a href="#" class="btn btn--white js__header--login">Login</a>
         <!--comp/button-->
     
+        <div class="header__main--profile js--header__main--profile">
+            <svg class="header__main--profile-likes">
+                <use xlink:href="img/sprite.svg#icon-heart"></use>
+            </svg>
+            <svg class="header__main--profile-likes">
+                <use xlink:href="img/sprite.svg#icon-bell"></use>
+            </svg>
+            <svg class="header__main--profile-likes">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
+            <img src="img/profile.jpg" alt="profile picture" class="header__main--profile-img">
+        </div>
     </header>
 
 
