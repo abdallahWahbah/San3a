@@ -4,25 +4,15 @@
   "description": "San3a website for handmade products",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss dist/css/style.css -w",
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "parcel src/html/index.html"
   },
   "author": "San3a team",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.2",
     "babel-preset-env": "^1.7.0",
-    "html-webpack-plugin": "^5.3.1",
-    "node-sass": "^5.0.0",
-    "webpack": "^5.28.0",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
+    "sass": "^1.32.8"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
     "jquery": "^3.5.1"
   }
 }
