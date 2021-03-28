@@ -3,17 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Product</title>
+        <title>Checkout</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-
+        <!-- <link rel="stylesheet" href="dist/css/style.css"> -->
+        <!-- <link rel="stylesheet" href="css/animate.compat.css"> -->
+        <link rel="shortcut icon" type="image/png" href="../../dist/img/favicon.png">
+        <link rel="stylesheet" href="../../dist/css/style.css">
+        <link rel="stylesheet" href="../../dist/css/animate.compat.css">
+        
     </head>
     <body>
-
+        
         <!--pages/home, base/utilities-->
         <header class="header u__padding__right__left__medium">
             <!--layouts/navigation-->
@@ -35,14 +38,14 @@
             </div>
         
             <!--pages/home-->
-            <img src="img/logo3.jpeg" alt="San3a logo" class="logo">
+            <img src="../../dist/img/logo3.jpeg" alt="San3a logo" class="logo">
         
             <form class="search">
                 <!--components/search-->
                 <input type="text" class="search__input" placeholder="search....">
                 <button class="search__button">
                     <svg class="search__icon">
-                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        <use xlink:href="../../dist/img/sprite.svg#icon-magnifying-glass"></use>
                     </svg>
                 </button>
         
@@ -82,15 +85,15 @@
         
             <div class="header__main--profile js--header__main--profile">
                 <svg class="header__main--profile-likes">
-                    <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    <use xlink:href="../../dist/img/sprite.svg#icon-heart"></use>
                 </svg>
                 <svg class="header__main--profile-likes">
-                    <use xlink:href="img/sprite.svg#icon-bell"></use>
+                    <use xlink:href="../../dist/img/sprite.svg#icon-bell"></use>
                 </svg>
                 <svg class="header__main--profile-likes">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
+                    <use xlink:href="../../dist/img/sprite.svg#icon-cart"></use>
                 </svg>
-                <img src="img/profile.jpg" alt="profile picture" class="header__main--profile-img">
+                <img src="../../dist/img/profile.jpg" alt="profile picture" class="header__main--profile-img">
             </div>
         </header>
 
@@ -99,85 +102,62 @@
 
 
 
-        <section class="product"> <!--pages/product-->
+        <section class="checkout"> <!--pages/checkout-->
+            <h2 class="heading__secondary">Checkout</h2>
+            <div class="address">
+                <div >Shoppimg address</div>
+                <div >John Doe<br>No 123, Sub Street<br>City name<br>Governerate</div>
+            </div>
 
-            <h2 class="heading__secondary">Knitting Bag</h2>    <!--base/typo-->
+            <hr>
 
-            <div class="product__img__container">
-                <img src="img/1.jpg" alt="Main photo of the product">
-                <div class="small__images">
-                    <img src="img/2.jpg" alt="product photo">
-                    <img src="img/3.jpg" alt="product photo">
-                    <img src="img/4.jpg" alt="product photo">
+            <h2 class="heading__secondary">Payment Method</h2>
+            <div class="mastercard">
+                <img src="../../dist/img/masterCard.png" alt="masterCard image" class="mastercard__img">
+                <span class="mastercard__text">Master Card ending **00</span>
+            </div>
+            <div class="checkout__item__text">Item</div>
+            <div class="checkout__item">
+                <img src="../../dist/img/3.jpg" alt="item photo" class="checkout__item--img">
+                <div class="checkout__item--details">
+                    <div>Knitting bag</div>
+                    <div>Medium</div>
+                    <div class="price">
+                        <div class="price__number">11.20$</div>
+                        <div class="changes__number">
+                            <!-- <div class="">&minus;</div> -->
+                            <div href="#" class="changes__number--minus">&minus;</div>
+                            <div class="changes__number--number">1</div>
+                            <div href="#" class="changes__number--plus">&plus;</div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <label class="message__optional" for="message">Message to seller (Optional)</label>
+                        <textarea name="message" id="message" cols="25" rows="3" class="message__text-area"></textarea>
+                    </div>
                 </div>
             </div>
 
-            <p class="product__paragraph">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                book
-            </p>
+            <hr>
 
-            <form action="#" class="product__form">
-                <div class="input__container">
-                    <label for="quantity">Select Quantity :</label>
-                    <input type="number" name="quantity" value="1" id="quantity">
-                </div>
-
-
-                <label >Price :<span>16$</span></label>
-
-                <div class="input__container">
-                    <label for="color">Color :</label>
-                    <select name="color" id="color" class="product__select">
-                        <option value="none" disabled selected >Not set</option>
-                        <option value="red" >red</option>
-                        <option value="blue" >blue</option>
-                        <option value="green" >green</option>
-                        <option value="white" >white</option>
-                        <option value="yellow" >yellow</option>
-                    </select>
-                </div>
-
-                <div class="input__container">
-                    <label for="size">Size :</label>
-                    <select name="size" id="size" class="product__select">
-                        <option value="none" disabled selected >Not set</option>
-                        <option value="small" >small</option>
-                        <option value="medium" >medium</option>
-                        <option value="large" >large</option>
-                    </select>
-                </div>
-
-                <div class="input__container">
-                    <label for="">Reviews :</label>
-                    <div class="review">
-                        <div class="stars">
-                            <svg class="review__star">
-                                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-                            </svg>
-                            <svg class="review__star">
-                                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-                            </svg>
-                            <svg class="review__star">
-                                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-                            </svg>
-                            <svg class="review__star">
-                                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-                            </svg>
-                            <svg class="review__star">
-                                <use xlink:href="img/sprite.svg#icon-star-full"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <span>5</span>
-                </div>
-
-                <div class="input__container">
-                    <button type="submit" class="btn btn--red">Checkout</button>
+            <div class="checkout__total">Total: <span class="checkout__total-price">25.1$</span></div>
+            <div class="input__container"> <!--pages/product-->
+                    <button type="submit" class="btn btn--red checkout__btn">Checkout</button>
                     <a href="#"><div class="btn btn--white">Cancel</div></a>
+            </div>
+
+
+            <div class="checkout__popup">
+                <div class="checkout__popup--close-container">
+                    <div class="checkout__popup--close">&cross;</div>
+                    <div class="checkout__popup--checkmark">&checkmark;</div>
+                    <div class="checkout__popup--order-placed">Order placed !</div>
+                    <p class="checkout__popup--paragraph">
+                        Your order has been placed<br>successfully. For more details, check all your orders
+                    </p>
+                    <div class="checkout__popup--button btn btn--red">My orders</div>
                 </div>
-            </form>
+            </div>
 
         </section>
 
@@ -186,9 +166,7 @@
 
 
 
-
-
-        <script src="js/functionality.js"></script>
-        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="../js/functionality.js"></script>
+        <script src="../js/jquery.waypoints.min.js"></script>
     </body>
 </html>

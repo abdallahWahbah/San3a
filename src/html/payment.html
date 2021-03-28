@@ -3,16 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Checkout</title>
+        <title>Payment</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <!-- <link rel="stylesheet" href="dist/css/style.css"> -->
+        <!-- <link rel="stylesheet" href="css/animate.compat.css"> -->
+        <link rel="shortcut icon" type="image/png" href="../../dist/img/favicon.png">
+        <link rel="stylesheet" href="../../dist/css/style.css">
+        <link rel="stylesheet" href="../../dist/css/animate.compat.css">
+        
     </head>
     <body>
-        
+
         <!--pages/home, base/utilities-->
         <header class="header u__padding__right__left__medium">
             <!--layouts/navigation-->
@@ -34,14 +38,14 @@
             </div>
         
             <!--pages/home-->
-            <img src="img/logo3.jpeg" alt="San3a logo" class="logo">
+            <img src="../../dist/img/logo3.jpeg" alt="San3a logo" class="logo">
         
             <form class="search">
                 <!--components/search-->
                 <input type="text" class="search__input" placeholder="search....">
                 <button class="search__button">
                     <svg class="search__icon">
-                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        <use xlink:href="../../dist/img/sprite.svg#icon-magnifying-glass"></use>
                     </svg>
                 </button>
         
@@ -81,15 +85,15 @@
         
             <div class="header__main--profile js--header__main--profile">
                 <svg class="header__main--profile-likes">
-                    <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    <use xlink:href="../../dist/img/sprite.svg#icon-heart"></use>
                 </svg>
                 <svg class="header__main--profile-likes">
-                    <use xlink:href="img/sprite.svg#icon-bell"></use>
+                    <use xlink:href="../../dist/img/sprite.svg#icon-bell"></use>
                 </svg>
                 <svg class="header__main--profile-likes">
-                    <use xlink:href="img/sprite.svg#icon-cart"></use>
+                    <use xlink:href="../../dist/img/sprite.svg#icon-cart"></use>
                 </svg>
-                <img src="img/profile.jpg" alt="profile picture" class="header__main--profile-img">
+                <img src="../../dist/img/profile.jpg" alt="profile picture" class="header__main--profile-img">
             </div>
         </header>
 
@@ -98,63 +102,49 @@
 
 
 
-        <section class="checkout"> <!--pages/checkout-->
-            <h2 class="heading__secondary">Checkout</h2>
-            <div class="address">
-                <div >Shoppimg address</div>
-                <div >John Doe<br>No 123, Sub Street<br>City name<br>Governerate</div>
-            </div>
+        <section class="payment"> <!--pages/payment-->
+
+            <img src="../../dist/img/mastercard3.png" alt="mastercard image" class="payment__photo">
+            <div class="payment__text">Choose the payment method that suits you</div>
 
             <hr>
-
-            <h2 class="heading__secondary">Payment Method</h2>
-            <div class="mastercard">
-                <img src="img/masterCard.png" alt="masterCard image" class="mastercard__img">
-                <span class="mastercard__text">Master Card ending **00</span>
-            </div>
-            <div class="checkout__item__text">Item</div>
-            <div class="checkout__item">
-                <img src="img/3.jpg" alt="item photo" class="checkout__item--img">
-                <div class="checkout__item--details">
-                    <div>Knitting bag</div>
-                    <div>Medium</div>
-                    <div class="price">
-                        <div class="price__number">11.20$</div>
-                        <div class="changes__number">
-                            <!-- <div class="">&minus;</div> -->
-                            <div href="#" class="changes__number--minus">&minus;</div>
-                            <div class="changes__number--number">1</div>
-                            <div href="#" class="changes__number--plus">&plus;</div>
-                        </div>
-                    </div>
-                    <div class="message">
-                        <label class="message__optional" for="message">Message to seller (Optional)</label>
-                        <textarea name="message" id="message" cols="25" rows="3" class="message__text-area"></textarea>
-                    </div>
+            
+            <form action="#" class="payment__form">
+                <!-- <div class="payment__form--col">
+                    <label for="type" class="payment__form--col-label">Card type</label>
+                    <input type="text" class="payment__form--col-input" id="type" name="type" required>
                 </div>
-            </div>
-
-            <hr>
-
-            <div class="checkout__total">Total: <span class="checkout__total-price">25.1$</span></div>
-            <div class="input__container"> <!--pages/product-->
-                    <button type="submit" class="btn btn--red checkout__btn">Checkout</button>
-                    <a href="#"><div class="btn btn--white">Cancel</div></a>
-            </div>
-
-
-            <div class="checkout__popup">
-                <div class="checkout__popup--close-container">
-                    <div class="checkout__popup--close">&cross;</div>
-                    <div class="checkout__popup--checkmark">&checkmark;</div>
-                    <div class="checkout__popup--order-placed">Order placed !</div>
-                    <p class="checkout__popup--paragraph">
-                        Your order has been placed<br>successfully. For more details, check all your orders
-                    </p>
-                    <div class="checkout__popup--button btn btn--red">My orders</div>
+                <div class="payment__form--col">
+                    <label for="date" class="payment__form--col-label">Expire date</label>
+                    <input type="text" class="payment__form--col-input" id="date" name="date" required>
                 </div>
-            </div>
+                <div class="payment__form--col">
+                    <label for="number" class="payment__form--col-label">Card number</label>
+                    <input type="text" class="payment__form--col-input" id="number" name="number" required>
+                </div>
+                <div class="payment__form--col">
+                    <label for="number2" class="payment__form--col-label">Number(CVC, CCV)</label>
+                    <input type="text" class="payment__form--col-input" id="number2" name="number2" required>
+                </div> -->
+                <div class="payment__form--text">
+                    <label for="type" class="payment__form--text-label">Card type</label>
+                    <label for="date" class="payment__form--text-label">Expire date</label>
+                    <label for="number" class="payment__form--text-label">Card number</label>
+                    <label for="number2" class="payment__form--text-label">Number(CVC, CCV)</label>
+                </div>
+                <div class="payment__form--input">
+                    <input type="text" class="payment__form--input-item" id="type" name="type" required>
+                    <input type="text" class="payment__form--input-item" id="date" name="date" required>
+                    <input type="text" class="payment__form--input-item" id="number" name="number" required>
+                    <input type="text" class="payment__form--input-item" id="number2" name="number2" required>
+                </div>
+            </form>
 
+            <div class="payment__buttons">
+                <div class="btn btn--red">Pay</div>
+                <div class="btn btn--white  ">Cancel</div>
+            </div>
+            
         </section>
 
 
@@ -162,7 +152,8 @@
 
 
 
-        <script src="js/functionality.js"></script>
-        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="../js/functionality.js"></script>
+        <script src="../js/jquery.waypoints.min.js"></script>
+        
     </body>
 </html>
