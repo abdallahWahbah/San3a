@@ -4,7 +4,7 @@
   "description": "San3a website for handmade products",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/html/index.html"
+    "start": "parcel src/html/tutorials.html"
   },
   "author": "San3a team",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "node-sass": "^5.0.0"
   }
 }

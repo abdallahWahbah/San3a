@@ -1,154 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adding new item</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Adding new item</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    
-    <!-- <link rel="stylesheet" href="dist/css/style.css"> -->
-    <!-- <link rel="stylesheet" href="css/animate.compat.css"> -->
-    <link rel="shortcut icon" type="image/png" href="../../dist/img/favicon.png">
-    <link rel="stylesheet" href="../../dist/css/style.css">
-    <link rel="stylesheet" href="../../dist/css/animate.compat.css">
-</head>
-<body>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        
+        <link rel="shortcut icon" type="image/png" href="../img/favicon.png">
+        <link rel="stylesheet" href="../sass/main.scss">
+        <link rel="stylesheet" href="../css/animate.compat.css">
+    </head>
+    <body>
 
-    <!--pages/home, base/utilities-->
-    <header class="header u__padding__right__left__medium">
-        <!--layouts/navigation-->
-        <div class="navigation js--header__profile--nav">
-            <span class="navigation__icon js__navigation__icon-1">&equiv;</span>
-            <div class="navigation__background">&nbsp;</div>
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">Profile</a></li>
-                    <li class="navigation__item navigation__item-lined"><a href="#" class="navigation__link">History</a>
-                    </li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Settings</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Seller product</a></li>
-                    <li class="navigation__item navigation__item-lined"><a href="#" class="navigation__link">Customer
-                            request</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Logout</a></li>
-                </ul>
-            </nav>
-        </div>
-    
-        <!--pages/home-->
-        <img src="../../dist/img/logo3.jpeg" alt="San3a logo" class="logo">
-    
-        <form class="search">
-            <!--components/search-->
-            <input type="text" class="search__input" placeholder="search....">
-            <button class="search__button">
-                <svg class="search__icon">
-                    <use xlink:href="../../dist/img/sprite.svg#icon-magnifying-glass"></use>
+        <!--pages/home, base/utilities-->
+        <header class="header u__padding__right__left__medium">
+            <!--layouts/navigation-->
+            <div class="navigation js--header__profile--nav">
+                <span class="navigation__icon js__navigation__icon-1">&equiv;</span>
+                <div class="navigation__background">&nbsp;</div>
+                <nav class="navigation__nav">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#" class="navigation__link">Profile</a></li>
+                        <li class="navigation__item navigation__item-lined"><a href="#" class="navigation__link">History</a>
+                        </li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Settings</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Seller product</a></li>
+                        <li class="navigation__item navigation__item-lined"><a href="#" class="navigation__link">Customer
+                                request</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+            <!--pages/home-->
+            <img src="../img/logo3.jpeg" alt="San3a logo" class="logo">
+        
+            <form class="search">
+                <!--components/search-->
+                <input type="text" class="search__input" placeholder="search....">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+        
+            </form>
+        
+            <!--pages/home-->
+            <a href="#" class="header__tutorials">Tutorials</a>
+        
+            <!--layouts/navigation-->
+            <div class="navigation">
+                <span class="navigation__icon js__navigation__icon-2">Categories</span>
+                <div class="navigation__background navigation__background-2">&nbsp;</div>
+                <nav class="navigation__nav">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="#" class="navigation__link">Glass industry</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Carpet industry</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Soap industry</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Candle making</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Accessries</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Gift</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Sewing</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Tableau</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Glass industry</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Carpet industry</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Soap industry</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Candle making</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Accessries</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Gift</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Sewing</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Tableau</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+            <a href="#" class="btn btn--white js__header--login">Login</a>
+            <!--comp/button-->
+        
+            <div class="header__main--profile js--header__main--profile">
+                <svg class="header__main--profile-likes">
+                    <use xlink:href="../img/sprite.svg#icon-heart"></use>
                 </svg>
-            </button>
-    
-        </form>
-    
-        <!--pages/home-->
-        <a href="#" class="header__tutorials">Tutorials</a>
-    
-        <!--layouts/navigation-->
-        <div class="navigation">
-            <span class="navigation__icon js__navigation__icon-2">Categories</span>
-            <div class="navigation__background navigation__background-2">&nbsp;</div>
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">Glass industry</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Carpet industry</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Soap industry</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Candle making</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Accessries</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Gift</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Sewing</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Tableau</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Glass industry</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Carpet industry</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Soap industry</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Candle making</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Accessries</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Gift</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Sewing</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Tableau</a></li>
-                </ul>
-            </nav>
-        </div>
-    
-        <a href="#" class="btn btn--white js__header--login">Login</a>
-        <!--comp/button-->
-    
-        <div class="header__main--profile js--header__main--profile">
-            <svg class="header__main--profile-likes">
-                <use xlink:href="../../dist/img/sprite.svg#icon-heart"></use>
-            </svg>
-            <svg class="header__main--profile-likes">
-                <use xlink:href="../../dist/img/sprite.svg#icon-bell"></use>
-            </svg>
-            <svg class="header__main--profile-likes">
-                <use xlink:href="../../dist/img/sprite.svg#icon-cart"></use>
-            </svg>
-            <img src="../../dist/img/profile.jpg" alt="profile picture" class="header__main--profile-img">
-        </div>
-    </header>
-
-
-
-
-
-
-    <section class="add"> <!--sass/layouts/additem-->
-
-        <h2 class="heading__secondary">Welcome to our store</h2>    <!--base/typo-->
-
-        <div class="add__question">What will you add today ?</div>
-
-        <form action="#" class="add__form">
-            <div class="add__form--row">
-                <label for="names" class="add__form--row-label">Product name : </label>
-                <input type="text" class="add__form--row-input" name="names" id="names">
+                <svg class="header__main--profile-likes">
+                    <use xlink:href="../img/sprite.svg#icon-bell"></use>
+                </svg>
+                <svg class="header__main--profile-likes">
+                    <use xlink:href="../img/sprite.svg#icon-cart"></use>
+                </svg>
+                <img src="../img/profile.jpg" alt="profile picture" class="header__main--profile-img">
             </div>
-            <div class="add__form--row">
-                <label for="quantity" class="add__form--row-label">Quantity : </label>
-                <input type="text" class="add__form--row-input" name="quantity" id="quantity">
-            </div>
-            <div class="add__form--row">
-                <label for="spec" class="add__form--row-label">Specifications : </label>
-                <input type="text" class="add__form--row-input" name="spec" id="spec">
-            </div>
-            <div class="add__form--row">
-                <label for="price" class="add__form--row-label">Price of the product : </label>
-                <input type="text" class="add__form--row-input" name="price" id="price">
-            </div>
-            <div class="add__form--row">
-                <label for="time" class="add__form--row-label">Implementation time : </label>
-                <input type="text" class="add__form--row-input" name="time" id="time">
-            </div>
-            <div class="add__form--row">
-                <label for="delivery" class="add__form--row-label">Delivery service : </label>
-                <input type="text" class="add__form--row-input" name="delivery" id="delivery">
-            </div>
-            <div class="add__form--row add__form--row-2">
-                <label for="photo" class="add__form--row-label add__form--row-cursor">Photo of the product : </label>
-                <input type="file" class="add__form--row-input" name="photo" id="photo" accept="image/*" onchange="loadImage(event)" style="display: none;">
-                <img src="img/4.jpg" alt="" class="add__form--row-img">
-            </div>
-        </form>
-
-        <div class="add__buttons">
-            <div class="btn btn--red">Add product</div>
-            <div class="btn btn--white">Cancel</div>
-        </div>
-
-    </section>
+        </header>
 
 
 
-    <script src="../js/functionality.js"></script>
-    <script src="../js/jquery.waypoints.min.js"></script>
-</body>
+
+
+
+        <section class="add"> <!--sass/layouts/additem-->
+
+            <h2 class="heading__secondary">Welcome to our store</h2>    <!--base/typo-->
+
+            <div class="add__question">What will you add today ?</div>
+
+            <form action="#" class="add__form">
+                <div class="add__form--row">
+                    <label for="names" class="add__form--row-label">Product name : </label>
+                    <input type="text" class="add__form--row-input" name="names" id="names">
+                </div>
+                <div class="add__form--row">
+                    <label for="quantity" class="add__form--row-label">Quantity : </label>
+                    <input type="text" class="add__form--row-input" name="quantity" id="quantity">
+                </div>
+                <div class="add__form--row">
+                    <label for="spec" class="add__form--row-label">Specifications : </label>
+                    <input type="text" class="add__form--row-input" name="spec" id="spec">
+                </div>
+                <div class="add__form--row">
+                    <label for="price" class="add__form--row-label">Price of the product : </label>
+                    <input type="text" class="add__form--row-input" name="price" id="price">
+                </div>
+                <div class="add__form--row">
+                    <label for="time" class="add__form--row-label">Implementation time : </label>
+                    <input type="text" class="add__form--row-input" name="time" id="time">
+                </div>
+                <div class="add__form--row">
+                    <label for="delivery" class="add__form--row-label">Delivery service : </label>
+                    <input type="text" class="add__form--row-input" name="delivery" id="delivery">
+                </div>
+                <div class="add__form--row add__form--row-2">
+                    <label for="photo" class="add__form--row-label add__form--row-cursor">Photo of the product : </label>
+                    <input type="file" class="add__form--row-input" name="photo" id="photo" accept="image/*" onchange="loadImage(event)" style="display: none;">
+                    <img src="../img/4.jpg" alt="" class="add__form--row-img">
+                </div>
+            </form>
+
+            <div class="add__buttons">
+                <div class="btn btn--red">Add product</div>
+                <div class="btn btn--white">Cancel</div>
+            </div>
+
+        </section>
+
+
+
+        <script src="../js/functionality.js"></script>
+        <script src="../js/jquery.waypoints.min.js"></script>
+    </body>
 </html>
