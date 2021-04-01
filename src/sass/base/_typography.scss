@@ -27,34 +27,36 @@
 
 .heading__secondary
 {
-    background-image:linear-gradient(to right,
-                                    rgba($color-primary-light, .8),
-                                    rgba($color-primary-dark, .8));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    // background-image:linear-gradient(to right,
+    //                                 rgba($color-primary-light, .8),
+    //                                 rgba($color-primary-dark, .8));
+    // -webkit-background-clip: text;
+    // background-clip: text;
+    // color: transparent;
+
+    color: $color-secondary;
 
     // text-transform: uppercase;
     margin-bottom: 3rem;
     display: inline-block;
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: .2rem;
     display: inline-block;
-    transition: all .2s;
+    border-bottom: 3px solid $color-grey-dark-2;
+    // transition: all .2s;
 
-    &:hover
-    {
-        transform: skewY(2deg) skewX(15deg) scale(1.1);
-        text-shadow: $shadow-dark;
-    }
+    // &:hover
+    // {
+    //     transform: skewY(2deg) skewX(15deg) scale(1.1);
+    //     text-shadow: $shadow-dark;
+    // }
 
 
     @include respond(tab-land)
     {
         margin-bottom: 2rem;
         font-size: 2rem;
-        letter-spacing: .15rem;
+        border-bottom: 2px solid $color-grey-dark-2;
     }
 
     @include respond(tab-port)

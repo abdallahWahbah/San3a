@@ -19,6 +19,7 @@
         width: 8rem;
         height: 5rem;
         display: inline-block;
+        cursor: pointer;
     }
 
     &__tutorials
@@ -36,20 +37,42 @@
         justify-content: space-between;
         align-items: center;
 
-        & > * {cursor: pointer;}
-        & > *:not(:last-child)
+        &-link
+        {
+            text-decoration: none;
+            color: inherit;
+
+            &-1
+            {
+                position: relative;
+            }
+
+            &-search
+            {
+                position: absolute;
+                top: 6rem;
+                right: 7.5rem;
+                display: none;
+
+                @include respond(tab-land)
+                {
+                    top: 5.5rem;
+                    right: 5rem;
+                }
+            }
+            
+        }
+        &-likes
         {
             height: 2.5rem;
             width: 2.5rem;
-            margin-right: 1.5rem;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+
+            &:hover{fill: $color-primary;}
         }
-        &-img
-        {
-            height: 3rem;
-            width: 3rem;
-            border-radius: 50%;
-            border: 1px solid $color-grey-light-3;
-        }
+
+        & > *:not(:last-child){margin-right: 3rem;}
         
         
     }
@@ -78,22 +101,23 @@
     }
 }
 
-.best__selling, .just__for__you, .more__channels
+.top__cat, .our__products
 {
-    margin-top:2rem;
+    // margin-top:2rem;
 
-    .center_button{text-align: center;}
+    // .center_button{text-align: center;}
     
     .see__more__button
     {
         padding: 1.2rem 6rem;
     }
 
-    @include respond(tab-land)
-    {
-        margin-top:1.5rem;
-    }
+    // @include respond(tab-land)
+    // {
+    //     margin-top:1.5rem;
+    // }
 }
+.top__cat .col-1-of-4{box-shadow: none;}
 
 .best__selling-page
 {

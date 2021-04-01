@@ -18,35 +18,6 @@ var toggleActiveClass = (el1, el2, activeClass) => // for customer-seller signup
 toggleActiveClass(signUpCustomer, signUpSeller, "login__choose--active");
 toggleActiveClass(signUpSeller, signUpCustomer, "login__choose--active");
 
-// --------------------------- Header drop menu --------------------------- 
-var navIcon1 = document.querySelector(".js__navigation__icon-1");
-var navIcon2 = document.querySelector(".js__navigation__icon-2");
-
-var showHideLists = (el1, el2, backgroundClass, listClass) => // for header
-{
-    if(el1 && el2)
-    {
-        el1.addEventListener("click", () =>
-        {
-            // showing the list and background
-            var background1 = el1.nextElementSibling;
-            var list1 = el1.nextElementSibling.nextElementSibling.children[0];
-            background1.classList.toggle(backgroundClass);
-            list1.classList.toggle(listClass);
-
-            // hiding the another list with background
-            var background2 = el2.nextElementSibling;
-            var list2 = el2.nextElementSibling.nextElementSibling.children[0];
-            if(background2.classList.contains(backgroundClass))   background2.classList.remove(backgroundClass);
-            if(list2.classList.contains(listClass))    list2.classList.remove(listClass);
-
-        });
-    }
-};
-
-showHideLists(navIcon1, navIcon2, "background__opacity", "list__active");
-showHideLists(navIcon2, navIcon1, "background__opacity", "list__active");
-
 
 // --------------------------- Checkout page,   when you click checkout button to open up the popup --------------------------- 
 // checkout--background
@@ -202,3 +173,42 @@ else if(loginState === "logged")
     var profileLogin = document.querySelector(".js__header--login");
     headerHideItems(profileLogin);
 }
+
+
+
+
+
+// --------------------------- Click on logo to go to the main page --------------------------- 
+document.querySelector(".logo").addEventListener("click", () =>
+{
+    location.href="./index.html"
+})
+
+
+
+
+
+// --------------------------- Prevent defaults when you click on search svg on the header --------------------------- 
+// --------------------------- Show (and hide) the search form --------------------------- 
+// --------------------------- change the svg search icon color --------------------------- 
+
+
+document.querySelector(".js--header__main--profile-link-search").addEventListener("click", (e) =>
+{
+    e.preventDefault();
+    let search =document.querySelector(".header__main--profile-link-search");
+    
+    if(e.target.matches(".js--header__main--profile-likes, .js--header__main--profile-likes *"))
+    {
+        if(search.style.display === "block")
+        {
+            search.style.display = "none";
+            document.querySelector(".js--header__main--profile-likes").style.fill="inherit";
+        }
+        else
+        {
+            search.style.display = "block";
+            document.querySelector(".js--header__main--profile-likes").style.fill="#d94141";
+        }
+    }
+});

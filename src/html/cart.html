@@ -17,81 +17,54 @@
         
         <!--pages/home, base/utilities-->
         <header class="header u__padding__right__left__medium">
-            <!--layouts/navigation-->
-            <div class="navigation js--header__profile--nav">
-                <span class="navigation__icon js__navigation__icon-1">&equiv;</span>
-                <div class="navigation__background">&nbsp;</div>
-                <nav class="navigation__nav">
-                    <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#" class="navigation__link">Profile</a></li>
-                        <li class="navigation__item navigation__item-lined"><a href="#" class="navigation__link">History</a>
-                        </li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Settings</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Seller product</a></li>
-                        <li class="navigation__item navigation__item-lined"><a href="#" class="navigation__link">Customer
-                                request</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Logout</a></li>
-                    </ul>
-                </nav>
-            </div>
         
             <!--pages/home-->
             <img src="../img/logo3.jpeg" alt="San3a logo" class="logo">
         
-            <form class="search">
-                <!--components/search-->
-                <input type="text" class="search__input" placeholder="search....">
-                <button class="search__button">
-                    <svg class="search__icon">
-                        <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
-                    </svg>
-                </button>
-        
-            </form>
-        
-            <!--pages/home-->
-            <a href="#" class="header__tutorials">Tutorials</a>
-        
             <!--layouts/navigation-->
             <div class="navigation">
-                <span class="navigation__icon js__navigation__icon-2">Categories</span>
-                <div class="navigation__background navigation__background-2">&nbsp;</div>
-                <nav class="navigation__nav">
-                    <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#" class="navigation__link">Glass industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Carpet industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Soap industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Candle making</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Accessries</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Gift</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Sewing</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Tableau</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Glass industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Carpet industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Soap industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Candle making</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Accessries</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Gift</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Sewing</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Tableau</a></li>
-                    </ul>
-                </nav>
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Tutorials</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Categories</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Products</a></li>
+                </ul>
             </div>
         
             <a href="#" class="btn btn--white js__header--login">Login</a>
             <!--comp/button-->
         
             <div class="header__main--profile js--header__main--profile">
-                <svg class="header__main--profile-likes">
-                    <use xlink:href="../img/sprite.svg#icon-heart"></use>
-                </svg>
-                <svg class="header__main--profile-likes">
-                    <use xlink:href="../img/sprite.svg#icon-bell"></use>
-                </svg>
-                <svg class="header__main--profile-likes">
-                    <use xlink:href="../img/sprite.svg#icon-cart"></use>
-                </svg>
-                <img src="../img/profile.jpg" alt="profile picture" class="header__main--profile-img">
+                <!--pages/home-->
+                <a href=""
+                    class="header__main--profile-link header__main--profile-link-search-1 js--header__main--profile-link-search">
+                    <svg class="header__main--profile-likes js--header__main--profile-likes">
+                        <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+        
+                    <!--components/search, pages/home(position)-->
+                    <form class="search header__main--profile-link-search">
+        
+                        <input type="text" class="search__input" placeholder="search....">
+                        <button class="search__button">
+                            <svg class="search__icon">
+                                <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
+                            </svg>
+                        </button>
+        
+                    </form>
+                </a>
+                <a href="#" class="header__main--profile-link">
+                    <svg class="header__main--profile-likes">
+                        <use xlink:href="../img/sprite.svg#icon-user"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header__main--profile-link">
+                    <svg class="header__main--profile-likes">
+                        <use xlink:href="../img/sprite.svg#icon-cart"></use>
+                    </svg>
+                </a>
             </div>
         </header>
 

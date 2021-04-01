@@ -17,81 +17,54 @@
         
         <!--pages/home, base/utilities-->
         <header class="header u__padding__right__left__medium">
-            <!--layouts/navigation-->
-            <div class="navigation js--header__profile--nav">
-                <span class="navigation__icon js__navigation__icon-1">&equiv;</span>
-                <div class="navigation__background">&nbsp;</div>
-                <nav class="navigation__nav">
-                    <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#" class="navigation__link">Profile</a></li>
-                        <li class="navigation__item navigation__item-lined"><a href="#" class="navigation__link">History</a>
-                        </li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Settings</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Seller product</a></li>
-                        <li class="navigation__item navigation__item-lined"><a href="#" class="navigation__link">Customer
-                                request</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Logout</a></li>
-                    </ul>
-                </nav>
-            </div>
         
             <!--pages/home-->
             <img src="../img/logo3.jpeg" alt="San3a logo" class="logo">
         
-            <form class="search">
-                <!--components/search-->
-                <input type="text" class="search__input" placeholder="search....">
-                <button class="search__button">
-                    <svg class="search__icon">
-                        <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
-                    </svg>
-                </button>
-        
-            </form>
-        
-            <!--pages/home-->
-            <a href="#" class="header__tutorials">Tutorials</a>
-        
             <!--layouts/navigation-->
             <div class="navigation">
-                <span class="navigation__icon js__navigation__icon-2">Categories</span>
-                <div class="navigation__background navigation__background-2">&nbsp;</div>
-                <nav class="navigation__nav">
-                    <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#" class="navigation__link">Glass industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Carpet industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Soap industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Candle making</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Accessries</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Gift</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Sewing</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Tableau</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Glass industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Carpet industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Soap industry</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Candle making</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Accessries</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Gift</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Sewing</a></li>
-                        <li class="navigation__item"><a href="#" class="navigation__link">Tableau</a></li>
-                    </ul>
-                </nav>
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Tutorials</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Categories</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Products</a></li>
+                </ul>
             </div>
         
             <a href="#" class="btn btn--white js__header--login">Login</a>
             <!--comp/button-->
         
             <div class="header__main--profile js--header__main--profile">
-                <svg class="header__main--profile-likes">
-                    <use xlink:href="../img/sprite.svg#icon-heart"></use>
-                </svg>
-                <svg class="header__main--profile-likes">
-                    <use xlink:href="../img/sprite.svg#icon-bell"></use>
-                </svg>
-                <svg class="header__main--profile-likes">
-                    <use xlink:href="../img/sprite.svg#icon-cart"></use>
-                </svg>
-                <img src="../img/profile.jpg" alt="profile picture" class="header__main--profile-img">
+                <!--pages/home-->
+                <a href=""
+                    class="header__main--profile-link header__main--profile-link-search-1 js--header__main--profile-link-search">
+                    <svg class="header__main--profile-likes js--header__main--profile-likes">
+                        <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+        
+                    <!--components/search, pages/home(position)-->
+                    <form class="search header__main--profile-link-search">
+        
+                        <input type="text" class="search__input" placeholder="search....">
+                        <button class="search__button">
+                            <svg class="search__icon">
+                                <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
+                            </svg>
+                        </button>
+        
+                    </form>
+                </a>
+                <a href="#" class="header__main--profile-link">
+                    <svg class="header__main--profile-likes">
+                        <use xlink:href="../img/sprite.svg#icon-user"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header__main--profile-link">
+                    <svg class="header__main--profile-likes">
+                        <use xlink:href="../img/sprite.svg#icon-cart"></use>
+                    </svg>
+                </a>
             </div>
         </header>
 
@@ -205,28 +178,52 @@
 
         <footer class="footer">
             <!--layouts/footer-->
-            <div class="footer__logo-box">
-                <img src="../img/favicon.png" class="footer__logo-box-img">
-            </div>
-            <div class="footer__row">
-                <div class="col-1-of-2">
+        
+            <div class="row">
+        
+                <div class="footer__container footer__container-1">
+                    <div class="footer__container--img">
+                        <img src="../img/1.jpeg" class="footer__container--img-1"></img>
+                        <img src="../img/logo2.jpeg" class="footer__container--img-2"></img>
+                    </div>
+                    <div class="footer__copyright">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard
+                        dummy text ever since the 1500s
+                    </div>
+                </div>
+        
+                <div class="footer__container">
+                    <h3 class="footer__header">Our services</h3>
                     <div class="footer__navigation">
                         <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Delivery information</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Shopping & return</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Special</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-1-of-2">
-                    <p class="footer__copyright">
-                        Built by me <a href="#" class="footer__link">abdallah</a>, <a href="#" class="footer__link">Alaa</a> and
-                        <a href="#" class="footer__link">Amira</a>. Copyright &copy; by abdallah wahbah. You can contact me
-                        personally
-                        hahahaha. but please don't call after 12 am cause my parents will not be asleep hahahaha. wait! are you
-                        kidding!
-                    </p>
+        
+                <div class="footer__container">
+                    <h3 class="footer__header">My account</h3>
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">My order</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">My credit card</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">My address</a></li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="footer__container">
+                    <h3 class="footer__header">Have a question ?</h3>
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Aldaqahlia, Mansoura university</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">+01093894837487819</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">info@gmail.com</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>
