@@ -30,6 +30,39 @@
         }
     }
 
+
+    .col-1-of-2
+    {
+        width: calc((100% - 1 * #{$gutter-horizontal}) / 2);
+        // box-shadow: 0 .2rem 1rem rgba(0,0,0, .2);
+        border-radius: 1rem;
+        overflow: hidden;
+
+        &:not(:nth-child(2n))
+        {
+            margin-right: $gutter-horizontal; //6rem
+
+            @include respond(tab-land)
+            {
+                margin-right: 5rem;
+            }
+
+            @include respond(tab-port)
+            {
+                margin-right: 4.5rem;
+            }
+        }
+
+        @include respond(tab-land)
+        {
+            width: calc((100% - 1 * 5rem) / 2);
+        }
+        @include respond(tab-port)
+        {
+            width: calc((100% - 1 * 4.5rem) / 2);
+        }
+    }
+    
     .col-1-of-3
     {
         width: calc((100% - 2 * #{$gutter-horizontal}) / 3);

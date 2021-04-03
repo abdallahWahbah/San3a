@@ -108,8 +108,10 @@ var removeCatClass = () =>
     });
 }
 
-// choosing one color and hiding the rest (decreasing thier opacity)
-var colors= Array.from(document.querySelectorAll(".js__filter__color"));
+// --------------------------- Product page --------------------------- 
+// --------------------------- choosing one color and hiding the rest (decreasing thier opacity) --------------------------- 
+ 
+var colors= Array.from(document.querySelectorAll(".js--product__form--colors"));
 if(colors)
 {
     colors.forEach((el) =>
@@ -127,9 +129,145 @@ var removeColorClassDecreaseOpacity = () =>
     colors.forEach((el) =>
     {   
         if(el.classList.contains("color-chosen")) el.classList.remove("color-chosen");
-        el.style.opacity=".2";
+        el.style.opacity=".4";
     });
 }
+
+// --------------------------- Product page / increasing and decreasing number --------------------------- 
+
+var productFormContainers = Array.from(document.querySelectorAll(".product__form--container"));
+productFormContainers.forEach(current =>
+{
+    current.addEventListener("click", e =>
+    {
+
+        let quantityText = document.querySelector(".product__form--quantity-value");
+        let quantity = parseInt(quantityText.textContent);
+        let sizeText = document.querySelector(".product__form--size-value");
+        let size = parseInt(sizeText.textContent);
+
+        if(e.target.matches(".product__form--quantity-minus, .product__form--quantity-minus *"))
+        {
+            
+            if(parseInt(quantityText.textContent) <=0 )
+            {
+                quantity = 0;
+                quantityText.textContent = "0";
+            } 
+            else
+            {
+                quantity--;
+                quantityText.textContent = quantity.toString();
+            }
+        }
+        else if(e.target.matches(".product__form--quantity-plus, .product__form--quantity-plus *"))
+        {
+            if( !(parseInt(quantityText.textContent) >= 9))
+            {
+                quantity++;
+                quantityText.textContent = quantity.toString();
+            }
+        }
+        else if(e.target.matches(".product__form--size-minus, .product__form--size-minus *"))
+        {
+            
+            if(parseInt(sizeText.textContent) <=0 )
+            {
+                size = 0;
+                sizeText.textContent = "0";
+            } 
+            else
+            {
+                size--;
+                sizeText.textContent = size.toString();
+            }
+        }
+        else if(e.target.matches(".product__form--size-plus, .product__form--size-plus *"))
+        {
+            if( !(parseInt(sizeText.textContent) >= 9))
+            {
+                size = size + 2;
+                sizeText.textContent = size.toString();
+            }
+        }
+    })
+})
+
+// --------------------------- Product page / normal heart to outlined one when clicking on it(like product) --------------------------- 
+let productLikeLink = document.querySelector(".product__like--link");
+if(productLikeLink)
+{
+    productLikeLink.addEventListener("click", e =>
+    {
+        e.preventDefault();
+        if(e.target.matches(".product__like, .product__like *"))
+        {
+            document.querySelector(".product__like--2").style.display = "block";
+            document.querySelector(".product__like").style.display = "none";
+        }
+        else if(e.target.matches(".product__like--2, .product__like--2 *"))
+        {
+            document.querySelector(".product__like").style.display = "block";
+            document.querySelector(".product__like--2").style.display = "none";
+        }
+    })
+}
+
+// --------------------------- Product page / Switch between decription and reviews / limit description--------------------------- 
+let productDescription = document.querySelector(".product__desc--header");
+let productReviews = document.querySelector(".product__reviews--header");
+let productDescriptionShort = document.querySelector(".product__description");
+let productDescriptionLong = document.querySelector(".product__desc--detailed");
+let productReviewDescriptions = Array.from(document.querySelectorAll(".product__reviews--review-paragraph"));
+if(productDescription)
+{
+    productDescription.addEventListener("click", () =>
+    {
+        productDescription.style.color = "#d94141";
+        productReviews.style.color = "#333";
+        document.querySelector(".product__reviews").style.display = "none";
+        document.querySelector(".product__desc--detailed").style.display = "block";
+    });
+}
+if(productReviews)
+{
+    productReviews.addEventListener("click", () =>
+    {
+        productReviews.style.color = "#d94141";
+        productDescription.style.color = "#333";
+        document.querySelector(".product__desc--detailed").style.display = "none";
+        document.querySelector(".product__reviews").style.display = "block";
+    });
+}
+if(productDescriptionShort)
+{
+    if(productDescriptionShort.textContent.length > 150 )
+    {
+        let shortDesc = productDescriptionShort.textContent.substring(0, 150);
+        productDescriptionShort.textContent = shortDesc + "...........";
+    }
+}
+if(productDescriptionLong)
+{
+    if(productDescriptionLong.textContent.length > 500 )
+    {
+        let shortDesc = productDescriptionLong.textContent.substring(0, 500);
+        productDescriptionLong.textContent = shortDesc + "...........";
+    }
+}
+if(productReviewDescriptions)
+{
+    productReviewDescriptions.forEach(cur =>
+    {
+        if(cur.textContent.length > 650 )
+        {
+            console.log(cur.textContent.length)
+            let shortDesc = cur.textContent.substring(0, 650);
+            cur.textContent = shortDesc + "...........";
+        }
+    })
+}
+
 
 
 // --------------------------- Stichy header --------------------------- 
@@ -212,3 +350,7 @@ document.querySelector(".js--header__main--profile-link-search").addEventListene
         }
     }
 });
+
+// --------------------------- Profile page / change header svg profile icon color --------------------------- 
+
+// do your best

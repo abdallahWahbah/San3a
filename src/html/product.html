@@ -75,89 +75,608 @@
 
         <section class="product"> <!--pages/product-->
 
-            <h2 class="heading__secondary">Knitting Bag</h2>    <!--base/typo-->
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="product__img--container"> <!--page/product-->
+                        <img src="../img/1.jpg" alt="Main photo" class="product__img--container-img-big">
+                        <div class="product__img--container-small">
+                            <div class="row">
+                                <div class="col-1-of-3">
+                                    <img src="../img/3.jpg" alt="Another photo of the product" class="product__img--container-img-small">
+                                </div>
+                                <div class="col-1-of-3">
+                                    <img src="../img/3.jpg" alt="Another photo of the product" class="product__img--container-img-small">
+                                </div>
+                                <div class="col-1-of-3">
+                                    <img src="../img/3.jpg" alt="Another photo of the product" class="product__img--container-img-small">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="product__right">
+                        <h1 class="product__name">Natural Soap</h1>
 
-            <div class="product__img__container">
-                <img src="../img/1.jpg" alt="Main photo of the product">
-                <div class="small__images">
-                    <img src="../img/2.jpg" alt="product photo">
-                    <img src="../img/3.jpg" alt="product photo">
-                    <img src="../img/4.jpg" alt="product photo">
+                        <div class="card__stars"> <!--layouts/card-->
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                <stop offset="50%" stop-color="white" />
+                                <stop offset="50%" stop-color="grey" />
+                            </svg>
+                        </div>
+
+                        <h1 class="product__price">120$</h1>
+
+                        <hr>
+
+                        <p class="product__description">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                            dummy text ever since the 1500s, when an unknown printer took.............
+                        </p>
+
+                        <hr>
+
+                        <form action="#" class="product__form">
+                            
+
+                            <div class="product__form--container">
+                                <label class="product__form--label">Select Color</label>
+                                <div class="product__form--colors">
+                                    <div class="js--product__form--colors product__form--colors-white"></div>
+                                    <div class="js--product__form--colors product__form--colors-black"></div>
+                                    <div class="js--product__form--colors product__form--colors-red"></div>
+                                    <div class="js--product__form--colors product__form--colors-green"></div>
+                                    <div class="js--product__form--colors product__form--colors-blue"></div>
+                                    <div class="js--product__form--colors product__form--colors-gray"></div>
+                                </div>
+                            </div>
+
+                            <div class="product__form--container">
+                                <label class="product__form--label">Select Quantity</label>
+                                <div class="product__form--quantity">
+                                    <div class="product__form--quantity-minus">&minus;</div>
+                                    <div class="product__form--quantity-value">5</div>
+                                    <div class="product__form--quantity-plus">+</div>
+                                </div>
+                            </div>
+
+                        
+                            <div class="product__form--container">
+                                <label class="product__form--label">Select Size</label>
+                                <div class="product__form--size">
+                                    <div class="product__form--size-minus">&minus;</div>
+                                    <div class="product__form--size-value">1</div>
+                                    <div class="product__form--size-plus">&plus;</div>
+                                </div>
+                            </div>
+                        
+                        </form>
+
+                        <div class="product__cart__like">
+                            <a href="#" class="btn btn--red product__cart">Add to cart</a>
+                            
+                            <a href="#" class="product__like--link">
+                                <svg class="product__like">
+                                    <use xlink:href="../img/sprite.svg#icon-heart-outlined"></use>
+                                </svg>
+                                <svg class="product__like--2">
+                                    <use xlink:href="../img/sprite.svg#icon-heart"></use>
+                                </svg>
+
+                            </a>
+                        </div>
+
+                        <a href="#" class="product__free__shipping">Free shipping and free Returns</a>
+                    </div>
                 </div>
             </div>
 
-            <p class="product__paragraph">
+            <div class="product__desc__reviews">
+                <h1 class="product__desc--header">Description</h1>
+                <h1 class="product__reviews--header">Reviews</h1>
+            </div>
+
+            <p class="product__desc--detailed">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
                 dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                book
+                book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+                unchanged
             </p>
 
-            <form action="#" class="product__form">
-                <div class="input__container">
-                    <label for="quantity">Select Quantity :</label>
-                    <input type="number" name="quantity" value="1" id="quantity">
+            <hr>
+
+            <div class="product__reviews">
+                <h1 class="product__reviews--all">All reviews</h1>
+                <div class="product__reviews--container">
+                    <div class="product__reviews--review">
+                        <!--display flex, and the last one make flex: 0 1 70%-->
+                        <img src="../img/baby-girl.jpg" alt="Review" class="product__reviews--review-img">
+                        <div class="product__reviews--review-name">
+                            <h3 class="product__reviews--review-name-name">Omayma Gamal</h3>
+                            <div class="card__stars">
+                                <!--layouts/card-->
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    <stop offset="50%" stop-color="white" />
+                                    <stop offset="50%" stop-color="grey" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="product__reviews--review-paragraph">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                            standard
+                            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen
+                            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                            essentially
+                            unchanged
+                        </p>
+                    </div>
+
+                    <p class="product__reviews--date">23-may-2011</p>
+
                 </div>
 
+                <hr>
 
-                <label >Price :<span>16$</span></label>
-
-                <div class="input__container">
-                    <label for="color">Color :</label>
-                    <select name="color" id="color" class="product__select">
-                        <option value="none" disabled selected >Not set</option>
-                        <option value="red" >red</option>
-                        <option value="blue" >blue</option>
-                        <option value="green" >green</option>
-                        <option value="white" >white</option>
-                        <option value="yellow" >yellow</option>
-                    </select>
+                <div class="product__reviews--container">
+                    <div class="product__reviews--review">
+                        <!--display flex, and the last one make flex: 0 1 70%-->
+                        <img src="../img/baby-girl.jpg" alt="Review" class="product__reviews--review-img">
+                        <div class="product__reviews--review-name">
+                            <h3 class="product__reviews--review-name-name">Omayma Gamal</h3>
+                            <div class="card__stars">
+                                <!--layouts/card-->
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    <stop offset="50%" stop-color="white" />
+                                    <stop offset="50%" stop-color="grey" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="product__reviews--review-paragraph">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                            industry's
+                            standard
+                            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                            type
+                            specimen
+                            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                            essentially
+                            unchanged
+                        </p>
+                    </div>
+                
+                    <p class="product__reviews--date">23-may-2011</p>
+                
                 </div>
+                
+                <hr>
 
-                <div class="input__container">
-                    <label for="size">Size :</label>
-                    <select name="size" id="size" class="product__select">
-                        <option value="none" disabled selected >Not set</option>
-                        <option value="small" >small</option>
-                        <option value="medium" >medium</option>
-                        <option value="large" >large</option>
-                    </select>
+                <div class="product__reviews--container">
+                    <div class="product__reviews--review">
+                        <!--display flex, and the last one make flex: 0 1 70%-->
+                        <img src="../img/baby-girl.jpg" alt="Review" class="product__reviews--review-img">
+                        <div class="product__reviews--review-name">
+                            <h3 class="product__reviews--review-name-name">Omayma Gamal</h3>
+                            <div class="card__stars">
+                                <!--layouts/card-->
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                </svg>
+                                <svg class="card__stars--svg">
+                                    <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    <stop offset="50%" stop-color="white" />
+                                    <stop offset="50%" stop-color="grey" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="product__reviews--review-paragraph">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                            industry's
+                            standard
+                            dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+                            type
+                            specimen
+                            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                            essentially
+                            unchanged
+                        </p>
+                    </div>
+                
+                    <p class="product__reviews--date">23-may-2011</p>
+                
                 </div>
+                
+                <hr>
 
-                <div class="input__container">
-                    <label for="">Reviews :</label>
-                    <div class="review">
-                        <div class="stars">
-                            <svg class="review__star">
+            </div>
+
+            <div class="product__related">
+                <h1 class="product__related--header">Related Products</h1>
+
+                <div class="row"> <!--layouts/grid-->
+                    <div class="col-1-of-4">
+                        <a href="#" class="card">
+                            <!--layouts/card-->
+                            <div class="card__img--container">
+                                <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                            </div>
+                            <div class="card__name"> Tara from the hell</div>
+                            <div class="card__price">
+                                <span class="card__price--discount">120$</span>
+                                <span class="card__price--old"><del>150$</del></span>
+                            </div>
+                        </a>
+                        <div class="card__stars">
+                            <!--layouts/card-->
+                            <svg class="card__stars--svg">
                                 <use xlink:href="../img/sprite.svg#icon-star-full"></use>
                             </svg>
-                            <svg class="review__star">
+                            <svg class="card__stars--svg">
                                 <use xlink:href="../img/sprite.svg#icon-star-full"></use>
                             </svg>
-                            <svg class="review__star">
+                            <svg class="card__stars--svg">
                                 <use xlink:href="../img/sprite.svg#icon-star-full"></use>
                             </svg>
-                            <svg class="review__star">
+                            <svg class="card__stars--svg">
                                 <use xlink:href="../img/sprite.svg#icon-star-full"></use>
                             </svg>
-                            <svg class="review__star">
+                            <svg class="card__stars--svg">
                                 <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                <stop offset="50%" stop-color="white" />
+                                <stop offset="50%" stop-color="grey" />
                             </svg>
                         </div>
                     </div>
-                    <span>5</span>
-                </div>
 
-                <div class="input__container">
-                    <button type="submit" class="btn btn--red">Checkout</button>
-                    <a href="#"><div class="btn btn--white">Cancel</div></a>
+                    <div class="col-1-of-4">
+                        <a href="#" class="card">
+                            <!--layouts/card-->
+                            <div class="card__img--container">
+                                <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                            </div>
+                            <div class="card__name"> Tara from the hell</div>
+                            <div class="card__price">
+                                <span class="card__price--discount">120$</span>
+                                <span class="card__price--old"><del>150$</del></span>
+                            </div>
+                        </a>
+                        <div class="card__stars">
+                            <!--layouts/card-->
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                <stop offset="50%" stop-color="white" />
+                                <stop offset="50%" stop-color="grey" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <a href="#" class="card">
+                            <!--layouts/card-->
+                            <div class="card__img--container">
+                                <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                            </div>
+                            <div class="card__name"> Tara from the hell</div>
+                            <div class="card__price">
+                                <span class="card__price--discount">120$</span>
+                                <span class="card__price--old"><del>150$</del></span>
+                            </div>
+                        </a>
+                        <div class="card__stars">
+                            <!--layouts/card-->
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                <stop offset="50%" stop-color="white" />
+                                <stop offset="50%" stop-color="grey" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <a href="#" class="card">
+                            <!--layouts/card-->
+                            <div class="card__img--container">
+                                <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                            </div>
+                            <div class="card__name"> Tara from the hell</div>
+                            <div class="card__price">
+                                <span class="card__price--discount">120$</span>
+                                <span class="card__price--old"><del>150$</del></span>
+                            </div>
+                        </a>
+                        <div class="card__stars">
+                            <!--layouts/card-->
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                <stop offset="50%" stop-color="white" />
+                                <stop offset="50%" stop-color="grey" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <a href="#" class="card">
+                            <!--layouts/card-->
+                            <div class="card__img--container">
+                                <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                            </div>
+                            <div class="card__name"> Tara from the hell</div>
+                            <div class="card__price">
+                                <span class="card__price--discount">120$</span>
+                                <span class="card__price--old"><del>150$</del></span>
+                            </div>
+                        </a>
+                        <div class="card__stars">
+                            <!--layouts/card-->
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                <stop offset="50%" stop-color="white" />
+                                <stop offset="50%" stop-color="grey" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <a href="#" class="card">
+                            <!--layouts/card-->
+                            <div class="card__img--container">
+                                <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                            </div>
+                            <div class="card__name"> Tara from the hell</div>
+                            <div class="card__price">
+                                <span class="card__price--discount">120$</span>
+                                <span class="card__price--old"><del>150$</del></span>
+                            </div>
+                        </a>
+                        <div class="card__stars">
+                            <!--layouts/card-->
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                <stop offset="50%" stop-color="white" />
+                                <stop offset="50%" stop-color="grey" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <a href="#" class="card">
+                            <!--layouts/card-->
+                            <div class="card__img--container">
+                                <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                            </div>
+                            <div class="card__name"> Tara from the hell</div>
+                            <div class="card__price">
+                                <span class="card__price--discount">120$</span>
+                                <span class="card__price--old"><del>150$</del></span>
+                            </div>
+                        </a>
+                        <div class="card__stars">
+                            <!--layouts/card-->
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                <stop offset="50%" stop-color="white" />
+                                <stop offset="50%" stop-color="grey" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <a href="#" class="card">
+                            <!--layouts/card-->
+                            <div class="card__img--container">
+                                <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                            </div>
+                            <div class="card__name"> Tara from the hell</div>
+                            <div class="card__price">
+                                <span class="card__price--discount">120$</span>
+                                <span class="card__price--old"><del>150$</del></span>
+                            </div>
+                        </a>
+                        <div class="card__stars">
+                            <!--layouts/card-->
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                            </svg>
+                            <svg class="card__stars--svg">
+                                <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                <stop offset="50%" stop-color="white" />
+                                <stop offset="50%" stop-color="grey" />
+                            </svg>
+                        </div>
+                    </div>
+
                 </div>
-            </form>
+            </div>
 
         </section>
 
 
 
 
+
+
+        <footer class="footer">
+            <!--layouts/footer-->
+        
+            <div class="row">
+        
+                <div class="footer__container footer__container-1">
+                    <div class="footer__container--img">
+                        <img src="../img/1.jpeg" class="footer__container--img-1"></img>
+                        <img src="../img/logo2.jpeg" class="footer__container--img-2"></img>
+                    </div>
+                    <div class="footer__copyright">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard
+                        dummy text ever since the 1500s
+                    </div>
+                </div>
+        
+                <div class="footer__container">
+                    <h3 class="footer__header">Our services</h3>
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Delivery information</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Shopping & return</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Special</a></li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="footer__container">
+                    <h3 class="footer__header">My account</h3>
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">My order</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">My credit card</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">My address</a></li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <div class="footer__container">
+                    <h3 class="footer__header">Have a question ?</h3>
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Aldaqahlia, Mansoura university</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">+01093894837487819</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">info@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        
 
 
 
