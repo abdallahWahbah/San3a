@@ -1,4 +1,86 @@
 .profile
 {
-    
+    padding: 4rem 0;
+    margin-right: 15rem !important;
+    margin-left: 15rem !important;
+    color: $color-grey-dark-1;
+
+
+    &__main
+    {
+        display: flex;
+        align-items: center;
+        margin-bottom: 7rem;
+
+        &--img
+        {   
+            width: 17rem;
+            height: 17rem;
+            border-radius: 4rem;
+            margin-right: 5rem;
+
+            @include respond(tab-port)
+            {
+                width: 13rem;
+                height: 13rem;
+            }
+        }
+        &--personal
+        {
+            & > *:not(:last-child)
+            {
+                margin-bottom: 1rem;
+            }
+        }   
+        &--name
+        {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        &--email
+        {
+            font-size: 1.5rem;
+        }
+        &--edit
+        {
+            border:2px solid $color-grey-dark-3;
+            cursor: pointer;
+        }
+    }
+
+
+    &__clicks
+    {
+        border: 1px solid $color-grey-dark-3;
+        border-radius: 1rem;
+        box-shadow: $shadow-normal;
+
+        &--container
+        {
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
+            margin: 2rem 0;
+        }
+        &--header
+        {
+            margin-left: 5%;
+            font-size: 1.4rem;
+        }
+        &--arrow
+        {
+            margin-right: 5%;
+        }
+        &--line
+        {
+            width: 90%;
+            margin: 0 auto;
+            color:$color-grey-dark-3;
+            background: $color-grey-dark-3;
+        }
+    }
+
+
 }

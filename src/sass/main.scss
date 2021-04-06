@@ -7,6 +7,7 @@
 @import "base/utilities";
 
 @import "components/button";
+@import "components/form";
 @import "components/search";
 
 @import "layouts/card";
@@ -20,8 +21,9 @@
 @import "pages/cat";
 @import "pages/checkout";
 @import "pages/filter";
-@import "pages/product";
 @import "pages/home";
 @import "pages/payment";
-@import "pages/login";
+@import "pages/product";
+@import "pages/signUp";
 @import "pages/tutorials";
+@import "pages/profile.scss";

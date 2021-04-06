@@ -10,80 +10,94 @@
         
         <link rel="shortcut icon" type="image/png" href="../img/favicon.png">
         <link rel="stylesheet" href="../sass/main.scss">
+        <!-- <link rel="stylesheet" href="../../dist/main.31b31d70.css"> -->
         <link rel="stylesheet" href="../css/animate.compat.css">
         
     </head>
     <body>
         
-        <section class="login"><!--pages/login-->
-            <div class="col-1-of-2">
-                
-                <div class="login__icon__background">
-                    <img src="../img/bags.jpeg" class="login__icon">
+        <section class="signup"><!--pages/signUp, comp/form-->
+                <div class="signup__left">
+
+                    <img src="../img/logo.jpeg" alt="logo" class="signup__logo">
+                    <img src="../img/logo.jpeg" alt="logo" class="signup__logo">
+                    <p class="signup__paragraph">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard
+                        dummy text ever since the 1500s
+                    </p>
                 </div>
+                <div class="signup__right">
 
-            </div>
-        
-            <div class="col-1-of-2">
-                <div class="login__container">
-
-                    <div class="login__no__account__container">
-                        <h4 class="login__no__account__text">Already have an account ?</h4>
-                        <a href="#">
-                            <div class="btn btn--black">Login</div>
-                        </a>
-                        <!--comp/button-->
-                    </div>
-
-                    <h1 class="login__welcome">Welcome<br>to our store !</h1>
-
-                    <div class="login__choose">
-                        <div href="#" class="login__choose--anchor js--login__choose--active-1">
-                            <div class="login__choose--customer">I'm a customer</div><!--active class is called: login__choose--active-->
+                    <form action="#" class="form"> <!--components/form-->
+                        
+                        <h1 class="form__header">Create account</h1>
+                        
+                        <div class="form__group form__group--radio-first-input">
+                            <div class="form__radio--group">
+                                <input type="radio" class="form__radio--input" id="customer" name="accounttype">
+                                <label for="customer" class="form__radio--label">
+                                    <span class="form__radio--button"></span>
+                                    Customer
+                                </label>
+                            </div>
+                            <div class="form__radio--group">
+                                <input type="radio" class="form__radio--input" id="Seller" name="accounttype">
+                                <label for="Seller" class="form__radio--label">
+                                    <span class="form__radio--button"></span>
+                                    Seller
+                                </label>
+                            </div>
                         </div>
-                        <div href="#" class="login__choose--anchor js--login__choose--active-2">
-                            <div class="login__choose--seller">I'm a seller</div>
-                        </div>
-                    </div>
 
-                    <div class="login__sign__with">
-                        <a href="#" class="login__sign__with--anchor facebook">
-                            <svg class="login__sign__with--icon">
-                                <use xlink:href="../img/sprite.svg#icon-facebook"></use>
-                            </svg>
-                            <span class="login__sign__with--text">Sign up with Facebook</span>
-                        </a>
-                        <a href="#" class="login__sign__with--anchor google">
-                            <svg class="login__sign__with--icon">
-                                <use xlink:href="../img/sprite.svg#icon-google"></use>
-                            </svg>
-                            <span class="login__sign__with--text">Sign up with Google</span>
-                        </a>
-                    </div>
-
-                    <div class="or"><span class="span">OR</span></div>
-
-                    <form action="#" class="form">
                         <div class="form__group">
-                            <input type="text" class="form__input" placeholder="Full name" id="name" required>
-                            <label for="name" class="form__label">Full name</label>
+                            <input type="text" class="form__input" placeholder="User name" id="name" required>
+                            <label for="name" class="form__label">User name</label>
                         </div>
+
                         <div class="form__group">
                             <input type="email" class="form__input" placeholder="Email address" id="email" required>
                             <label for="email" class="form__label">Email address</label>
                         </div>
+
                         <div class="form__group">
-                            <input type="text" class="form__input" placeholder="Password" id="password" required>
+                            <input type="password" class="form__input" placeholder="Password" id="password" required>
                             <label for="password" class="form__label">Password</label>
                         </div>
+                        
                         <div class="form__group">
-                            <input type="text" class="form__input" placeholder="city" id="city">
-                            <label for="city" class="form__label">City</label>
+                            <input type="password" class="form__input" placeholder="Repeat password" id="repeatpassword" required>
+                            <label for="repeatpassword" class="form__label">Repeat password</label>
                         </div>
-                        <button href="#" class="btn btn--red form__anchor form__anchor-left">Sign up</button>
+
+                        <button class="btn btn--red form__button">Sign up</button>
+
+                        <h1 class="or"><span class="or__span">Or</span></h1> <!--pages/signUp-->
+
+                        <div class="form__links--container">
+                            <a href="#" class="form__links--href">
+                                <svg class="form__link form__link--1">
+                                    <use xlink:href="../img/sprite.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="form__links--href">
+                                <svg class="form__link form__link--2">
+                                    <use xlink:href="../img/sprite.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="form__links--href">
+                                <svg class="form__link form__link--3">
+                                    <use xlink:href="../img/sprite.svg#icon-google"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <p class="form__already">Already have an account? <a href="#" class="form__already--log">Login</a></p>
                     </form>
+
+
+                    
                 </div>
-            </div>
         </section>
 
 

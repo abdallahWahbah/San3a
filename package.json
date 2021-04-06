@@ -4,7 +4,7 @@
   "description": "San3a website for handmade products",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/html/profile.html"
+    "start": "parcel src/html/signUp.html"
   },
   "author": "San3a team",
   "license": "ISC",
