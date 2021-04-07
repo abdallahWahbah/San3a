@@ -12,8 +12,7 @@
     background-position: left;
     background-size: cover;
     flex: 0 1 40%;
-    // height: 100%;
-    height: 100vh;
+    height: 80rem;
     align-self: flex-start;
     
     display: flex;
@@ -25,11 +24,23 @@
     {
       margin-bottom: 1rem;
     }
+
+    @include respond(tab-phone)
+    {
+      height: 60rem;
+    }
   }
   &__logo
   {
     width: 17rem;
     height: 10rem;
+
+    @include respond(tab-land)
+    {
+      width: 14rem;
+      height: 7rem;
+    }
+
   }
   &__paragraph
   {
@@ -37,13 +48,31 @@
     color: $color-grey-light-3;
     font-size: 1.4rem;
     letter-spacing: 1px;
+
+    @include respond(tab-land)
+    {
+      margin: 0 2.5rem;
+      font-size: 1.2rem;
+    }
+
+    
   }
 
   // R.H.S
   &__right
   {
-    height: 100vh;
+    height: 70rem;
     margin:  4rem auto;
+
+    @include respond(tab-port)
+    {
+      margin-left: 2rem;   
+    }
+
+    @include respond(tab-phone)
+    {
+      height: 60rem;
+    }
   }
 
   .or
@@ -55,6 +84,11 @@
 
     line-height: 0.1em;
     margin: 10px 0 2rem; 
+
+    @include respond(tab-port)
+    {
+      width: 100%;   
+    }
 
     &__span
     {

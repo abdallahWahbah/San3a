@@ -1,6 +1,5 @@
 .form
 {
-
     display: flex;
     flex-direction: column;
 
@@ -9,6 +8,12 @@
         font-size: 5.5rem;
         font-weight: 700;
         margin-bottom: 2rem;
+        
+        @include respond(tab-port)
+        {
+            font-size: 4rem;
+            text-align: center;
+        }
     }
 
 
@@ -23,10 +28,22 @@
         align-items: center;
         width: 50rem;
         margin-bottom: 3rem !important;
+
+        @include respond(tab-port)
+        {
+            flex-wrap: wrap;
+            margin-bottom: 2rem !important;
+        }
     }
     &__radio--group
     {
         flex: 0 1 49%;
+        
+        @include respond(tab-port)
+        {
+            flex: 0 1 100%;
+            margin-bottom: 1.6rem;
+        }
     }   
     &__radio--input
     {
@@ -38,6 +55,7 @@
         font-size: 1.6rem;
         padding-left: 4.5rem;
         position: relative;
+
     }
     &__radio--button
     {
@@ -137,6 +155,11 @@
         width: 90%;
         border-radius: 4rem;
         margin-bottom: 2rem;
+
+        @include respond(tab-port)
+        {
+            width: 100%;   
+        }
     }
 
     &__links--container
@@ -148,6 +171,11 @@
         & > *:not(:last-child)
         {
             margin-right: 5rem;
+        }
+
+        @include respond(tab-port)
+        {
+            width: 100%;   
         }
     }
     &__links--href
@@ -183,6 +211,11 @@
         {
             text-decoration: none;
             // color: inherit;
+        }
+
+        @include respond(tab-port)
+        {   
+            width: 100%;
         }
     }
 }
