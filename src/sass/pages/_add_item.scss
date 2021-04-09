@@ -1,80 +1,152 @@
 .add
 {
     padding: 4rem 0;
+    margin: 0 15rem !important;
+    color: $color-grey-dark-2;
 
-    @include respond(tab-port)
+    &__welcome
     {
-        text-align: center;
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+
+        @include respond(tab-land)
+        {
+            font-size: 3rem;
+            margin-bottom: 1.7rem;
+        }
+
+        @include respond(tab-port)
+        {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;   
+        }
     }
-
-    &__question
+    &__container
     {
-        font-size: 1.8rem;
-        color: $color-grey-dark-2;
-        margin-bottom: 3rem;
+        background: $color-grey-light-1;
+        border-radius: 2rem;
+        padding: 4rem;
+
+        @include respond(tab-land)
+        {
+            padding: 3rem;   
+        }
+
+        @include respond(tab-port)
+        {
+            padding: 2.2rem;   
+        }
+    }
+    &__what
+    {
+        font-size: 2.5rem;
+
+        @include respond(tab-land)
+        {
+            font-size: 2rem;   
+        }
+
+        @include respond(tab-port)
+        {
+            font-size: 1.7rem;   
+        }
     }
     &__form
     {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
-        &--row
+        &--two-items
         {
-            margin-bottom: 3rem;
+            margin: 2rem 0;
+            flex: 0 1 49%;
 
             display: flex;
-            align-items: center;
+            flex-direction: column;
 
-            &-label
+            @include respond(tab-land)
             {
-                font-size: 1.7rem;
-                color: $color-grey-dark-2;
-                margin-right: 3rem;
-                flex: 0 1 17%;
+                margin: 1.7rem 0;   
+            }
 
-                @include respond(tab-land)
-                {
-                    flex: 0 1 20%;
-                }
-                @include respond(tab-port)
-                {
-                    flex: 0 1 27%;
-                    text-align: left;
-                }
-            }
-            &-input
+            @include respond(tab-port)
             {
-                padding: .5rem .7rem;
-                letter-spacing: 1px;
-                border-radius: .5rem;
-                border: 1px solid $color-grey-dark-1;
-                flex: 0 1 25%;
-
-                &:focus
-                {
-                    outline: none;
-                }
-            }
-            &-cursor
-            {
-                cursor: pointer;
-                font-weight: 700;
-            }
-            &-img
-            {
-                width: 29.5rem;
-                height: 20rem;
-                display: none;
-                border-radius: .5rem;
-            }
-            &-2 // for the last line, to align the image under the text in the same line
-            { 
-                align-items: flex-start;
+                margin: 1.5rem 0;   
             }
         }
+        &--text
+        {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+
+            @include respond(tab-land)
+            {
+                font-size: 1.5rem;
+            }
+
+            @include respond(tab-port)
+            {
+                font-size: 1.3rem;   
+            }
+        }
+        &--input-normal
+        {
+            width: 90%;
+            padding: 1.5rem;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+
+            &:focus
+            {
+                outline: none;
+            }
+            &-big
+            {
+                width: 100%;
+            }
+
+            @include respond(tab-land)
+            {
+                font-size: 1.4rem;   
+            }
+
+            @include respond(tab-port)
+            {
+                font-size: 1.3rem;   
+            }
+        }
+        &--one-item
+        {
+            margin: 2rem 0;
+            width: 100%;
+        }
+        &--input-big
+        {
+            display: none;
+        }
     }
-    &__buttons
+    #blah
     {
-        & > *:first-child{margin-right: 3rem;}
-        & > *:last-of-type{padding: .2rem 4rem ;}
-        @include respond(tab-port){text-align: left;}
+        width: 100%;
+        height: 40rem;
+        margin-top: 1rem;
+
+        @include respond(tab-land)
+        {
+            height: 30rem;   
+        }
+
+        @include respond(tab-port)
+        {
+            height: 20rem;   
+        }
+    }
+    &__button
+    {
+        padding: 1rem 4rem;
+        cursor: pointer;
     }
 }

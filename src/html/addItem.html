@@ -72,51 +72,108 @@
 
 
 
-        <section class="add"> <!--sass/layouts/additem-->
+        <section class="add"> <!--layouts/additem-->
 
-            <h2 class="heading__secondary">Welcome to our store</h2>    <!--base/typo-->
+            <h1 class="add__welcome">Welcome to our store</h1>
 
-            <div class="add__question">What will you add today ?</div>
+            <div class="add__container">
+                <h2 class="add__what">What will you add today?</h2>
+                <form action="#" class="add__form">
+                    <div class="add__form--two-items">
+                        <h3 class="add__form--text">Product name:</h3>
+                        <input type="text" class="add__form--input-normal" name="name">
+                    </div>
 
-            <form action="#" class="add__form">
-                <div class="add__form--row">
-                    <label for="names" class="add__form--row-label">Product name : </label>
-                    <input type="text" class="add__form--row-input" name="names" id="names">
-                </div>
-                <div class="add__form--row">
-                    <label for="quantity" class="add__form--row-label">Quantity : </label>
-                    <input type="text" class="add__form--row-input" name="quantity" id="quantity">
-                </div>
-                <div class="add__form--row">
-                    <label for="spec" class="add__form--row-label">Specifications : </label>
-                    <input type="text" class="add__form--row-input" name="spec" id="spec">
-                </div>
-                <div class="add__form--row">
-                    <label for="price" class="add__form--row-label">Price of the product : </label>
-                    <input type="text" class="add__form--row-input" name="price" id="price">
-                </div>
-                <div class="add__form--row">
-                    <label for="time" class="add__form--row-label">Implementation time : </label>
-                    <input type="text" class="add__form--row-input" name="time" id="time">
-                </div>
-                <div class="add__form--row">
-                    <label for="delivery" class="add__form--row-label">Delivery service : </label>
-                    <input type="text" class="add__form--row-input" name="delivery" id="delivery">
-                </div>
-                <div class="add__form--row add__form--row-2">
-                    <label for="photo" class="add__form--row-label add__form--row-cursor">Photo of the product : </label>
-                    <input type="file" class="add__form--row-input" name="photo" id="photo" accept="image/*" onchange="loadImage(event)" style="display: none;">
-                    <img src="../img/4.jpg" alt="" class="add__form--row-img">
-                </div>
-            </form>
+                    <div class="add__form--two-items">
+                        <h3 class="add__form--text">Quantity:</h3>
+                        <input type="text" class="add__form--input-normal add__form--input-normal-big" name="quantity">
+                    </div>
 
-            <div class="add__buttons">
-                <div class="btn btn--red">Add product</div>
-                <div class="btn btn--white">Cancel</div>
+                    <div class="add__form--two-items">
+                        <h3 class="add__form--text">Price of the product:</h3>
+                        <input type="text" class="add__form--input-normal " name="price">
+                    </div>
+
+                    <div class="add__form--two-items">
+                        <h3 class="add__form--text">Specifications:</h3>
+                        <input type="text" class="add__form--input-normal add__form--input-normal-big" name="spec">
+                    </div>
+
+                    <div class="add__form--two-items">
+                        <h3 class="add__form--text">Implementation time:</h3>
+                        <input type="text" class="add__form--input-normal " name="time">
+                    </div>
+
+                    <div class="add__form--two-items">
+                        <h3 class="add__form--text">Delivery service:</h3>
+                        <input type="text" class="add__form--input-normal add__form--input-normal-big" name="delivery">
+                    </div>
+
+                    <div class="add__form--one-item">
+                        <label for="inputimage" class="add__form--text">Choose product picture:</label>
+                        <input type="file" class="add__form--input-big" name="image" accept="image/*" id="inputimage" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                        <img src="../img/8.jpg" alt="product picture" id="blah">
+                    </div>
+
+                    <button class="btn btn--red add__button">Add product</button>
+                </form>
             </div>
 
         </section>
 
+
+
+
+
+        <footer class="footer"> <!--layouts/footer-->
+
+            <div class="row">
+                
+                    <div class="footer__container footer__container-1">
+                        <div class="footer__container--img">
+                            <img src="../img/1.jpeg" class="footer__container--img-1"></img>
+                            <img src="../img/logo2.jpeg" class="footer__container--img-2"></img>
+                        </div>
+                        <div class="footer__copyright">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                            dummy text ever since the 1500s
+                        </div>
+                    </div>
+                
+                    <div class="footer__container">
+                        <h3 class="footer__header">Our services</h3>
+                        <div class="footer__navigation">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">Delivery information</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Shopping & return</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Special</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__container">
+                        <h3 class="footer__header">My account</h3>
+                        <div class="footer__navigation">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">My order</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">My credit card</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">My address</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    
+                    <div class="footer__container">
+                        <h3 class="footer__header">Have a question ?</h3>
+                        <div class="footer__navigation">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">Aldaqahlia, Mansoura university</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">+01093894837487819</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">info@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </footer>
 
 
         <script src="../js/functionality.js"></script>

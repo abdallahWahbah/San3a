@@ -354,3 +354,6 @@ document.querySelector(".js--header__main--profile-link-search").addEventListene
 // --------------------------- Profile page / change header svg profile icon color --------------------------- 
 
 // do your best
+
+
+// --------------------------- addItem page / change picture when choosing --------------------------- 

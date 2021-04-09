@@ -46,7 +46,7 @@
 
 .sticky ~ .best__selling-page {margin-top: 9rem !important;}
 
-.sticky ~ .add,
+// .sticky ~ .add,
 .sticky ~ .cart,
 .sticky ~ .checkout,
 .sticky ~ .filter,
@@ -54,6 +54,7 @@
 .sticky ~ .profile
  {padding: 9rem 0 !important;} // 5rem : the height of the header + 4rem : the padding of each section
 .sticky ~ .product {padding: 9rem 0 0 0 !important; }
+.sticky ~ .add {padding: 9rem 0 4rem 0 !important;}
 
 
 
