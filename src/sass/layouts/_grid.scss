@@ -1,8 +1,10 @@
-.row
+.rows{display: none;}
+.row{display: flex;}
+.row, .rows // (rows in the checkout page to differ it with the normal row)(2/3 col)
 {
     padding-bottom: $gutter-vertical-small;
 
-    display: flex;
+    // display: flex; // look above (for js purposes)
     flex-wrap: wrap;
 
     @include respond(tab-land)
@@ -93,6 +95,14 @@
         {
             width: calc((100% - 2 * 4.5rem) / 3);
         }
+    }
+
+    .col-2-of-3
+    {
+        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}); 
+        box-shadow: 0 .2rem 1rem rgba(0,0,0, .2);
+        border-radius: 1rem;
+        overflow: hidden;
     }
 
     .col-1-of-4

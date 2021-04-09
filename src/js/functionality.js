@@ -144,7 +144,8 @@ productFormContainers.forEach(current =>
         let quantityText = document.querySelector(".product__form--quantity-value");
         let quantity = parseInt(quantityText.textContent);
         let sizeText = document.querySelector(".product__form--size-value");
-        let size = parseInt(sizeText.textContent);
+        let size;
+        if(sizeText) size = parseInt(sizeText.textContent);
 
         if(e.target.matches(".product__form--quantity-minus, .product__form--quantity-minus *"))
         {
@@ -356,4 +357,55 @@ document.querySelector(".js--header__main--profile-link-search").addEventListene
 // do your best
 
 
-// --------------------------- addItem page / change picture when choosing --------------------------- 
+// --------------------------- Checkout page /  choose between checkout and payment--------------------------- 
+
+let checkName = document.querySelector(".js--checkout__name-check");
+let paymentName = document.querySelector(".js--checkout__name-payment");
+if(paymentName)
+{
+    paymentName.addEventListener("click", () =>
+    {
+        let items = Array.from(document.querySelectorAll(".checkout__item"));
+        let deletes = [
+            ...items,
+            ...Array.from(document.querySelectorAll(".checkout__line")),
+            document.querySelector(".checkout__total"),
+            document.querySelector(".checkout__offer"),
+            document.querySelector(".js--offers")
+        ];
+        deletes.forEach(current =>
+        {
+            current.style.display = "none";
+        })
+        paymentName.style.color = "#d94141";
+        checkName.style.color = "#333339";
+
+        document.querySelector(".js--payment").style.display = "flex";
+    });
+}
+if(checkName)
+{
+    checkName.addEventListener("click", () =>
+    {
+        if(document.querySelector(".js--payment"))
+        {
+            document.querySelector(".js--payment").style.display = "none";
+        }
+        checkName.style.color = "#d94141";
+        paymentName.style.color = "#333339";
+
+        let items = Array.from(document.querySelectorAll(".checkout__item"));
+        items.forEach(current =>
+        {
+            current.style.display = "flex";
+        });
+
+        Array.from(document.querySelectorAll(".checkout__line")).forEach(current =>
+        {
+            current.style.display = "block";  
+        })
+        document.querySelector(".checkout__total").style.display = "block";
+        document.querySelector(".checkout__offer").style.display = "block";
+        document.querySelector(".js--offers").style.display = "flex";
+    });
+}
