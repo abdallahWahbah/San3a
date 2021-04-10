@@ -409,3 +409,59 @@ if(checkName)
         document.querySelector(".js--offers").style.display = "flex";
     });
 }
+
+
+
+
+// --------------------------- filter page / collapsible button--------------------------- 
+// this object is used to use the character enityty in js
+// you can fing the whole html entities from here https://www.freeformatter.com/html-entities.html
+window.htmlentities = {
+    /**
+     * Converts a string to its html characters completely.
+     *
+     * @param {String} str String with unescaped HTML characters
+     **/
+    encode : function(str) {
+        var buf = [];
+        
+        for (var i=str.length-1;i>=0;i--) {
+            buf.unshift(['&#', str[i].charCodeAt(), ';'].join(''));
+        }
+        
+        return buf.join('');
+    },
+    /**
+     * Converts an html characterSet into its original character.
+     *
+     * @param {String} str htmlSet entities
+     **/
+    decode : function(str) {
+        return str.replace(/&#(\d+);/g, function(match, dec) {
+            return String.fromCharCode(dec);
+        });
+    }
+};
+
+var collapsibles = Array.from(document.querySelectorAll(".filter__container--header"));
+if(collapsibles)
+{
+    for (let i = 0; i<collapsibles.length; i++ )
+    {
+        let coll = collapsibles[i];
+        coll.addEventListener("click", (e) =>
+        {
+            var details = coll.nextElementSibling;
+            if(details.style.display === "block")
+            {
+                details.style.display = "none";
+                coll.children[1].textContent = htmlentities.decode("&#8744;");
+            }
+            else
+            {
+                details.style.display = "block";
+                coll.children[1].textContent = htmlentities.decode("&#8743;");
+            }
+        });
+    }
+}

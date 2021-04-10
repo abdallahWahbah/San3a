@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Filter</title>
+        <title>Search</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -74,110 +74,569 @@
 
 
         <section class="filter"> <!--pages/filter-->
-            <h1 class="filter__main__text">Filter</h1>
-
-            <h2 class="filter__label">Catergories</h2>
-            <div class="row"> <!--layout/grid-->
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item filter__cat--item-red">Soup industry</p>
+            <div class="filter__header">
+                <h1 class="filter__header--name">Filter</h1>
+                <div class="filter__sort--container">
+                    <h3 class="filter__sort--name">Sort by</h3>
+                    <input type="text" class="filter__input">
                 </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
-                </div>
-                <div class="col-1-of-5">
-                    <p class="filter__cat--item">Soup industry</p>
+                <div class="filter__sort--container">
+                    <h3 class="filter__sort--name">Max results</h3>
+                    <input type="number" class="filter__input" max="16">
                 </div>
             </div>
 
-            <hr>
+            <hr class="filter__line">
 
-            <h2 class="filter__label">Color</h2>
-            <div class="filter__color">
-                <div class="js__filter__color filter__color-1 color-chosen"></div>
-                <div class="js__filter__color filter__color-2"></div>
-                <div class="js__filter__color filter__color-3"></div>
-                <div class="js__filter__color filter__color-4"></div>
-                <div class="js__filter__color filter__color-5"></div>
-                <div class="js__filter__color filter__color-6"></div>
-                <div class="js__filter__color filter__color-7"></div>
-            </div>
+            <div class="filter__container">
+                <div class="row"><!--layouts/grid-->
+                    <div class="col-1-of-4 filter__container--filters">
 
-            <hr>
+                        <div class="filter__container--header">
+                            <button type="button" class="collapsible">Categories</button>
+                            <div class="filter__container--arrow">&vee;</div>
+                        </div>
+                        <div class="filter__container--details">
+                            <ul class="filter__container--list">
+                                <li class="filter__container--item"><a href="#" class="filter__container--link">Ceramic</a></li>
+                                <li class="filter__container--item"><a href="#" class="filter__container--link">Spinning industry</a></li>
+                                <li class="filter__container--item"><a href="#" class="filter__container--link">Soap industry</a></li>
+                                <li class="filter__container--item"><a href="#" class="filter__container--link">Candle industry</a></li>
+                                <li class="filter__container--item"><a href="#" class="filter__container--link">Resin industry</a></li>
+                            </ul>
+                        </div>
 
-            <h2 class="filter__label">Price range</h2>
-            <!-- <input type="range" name="filter__range" min="0" max="1200" value="9" step="3"> -->
-            <div class="filter__price">
-                <div class="filter__price--row">
-                    <div class="filter__price--row-label">min</div>
-                    <input type="text" class="filter__price--row-val" name="filter__price--min">
+                        <div class="filter__container--header">
+                            <button type="button" class="collapsible">Size</button>
+                            <div class="filter__container--arrow">&vee;</div>
+                        </div>
+                        <div class="filter__container--details">
+                            <div class="filter__container--radio-group">
+                                <input type="radio" name="size" value="l" id="lsize">
+                                <label for="lsize">L</label>
+                            </div>
+                            <div class="filter__container--radio-group">
+                                <input type="radio" name="size" value="x" id="xsize">
+                                <label for="xsize">X</label>
+                            </div>
+                            <div class="filter__container--radio-group">
+                                <input type="radio" name="size" value="xxl" id="xxlsize">
+                                <label for="xxlsize">XXL</label>
+                            </div>
+                            <div class="filter__container--radio-group">
+                                <input type="radio" name="size" value="M" id="xsize">
+                                <label for="xsize">M</label>
+                            </div>
+                            <div class="filter__container--radio-group">
+                                <input type="radio" name="size" value="onesize" id="onesize">
+                                <label for="onesize">One size</label>
+                            </div>
+                        </div>
+
+                        <div class="filter__container--header">
+                            <button type="button" class="collapsible">Price</button>
+                            <div class="filter__container--arrow">&vee;</div>
+                        </div>
+                        <div class="filter__container--details">
+                            <div class="middle">
+                                <div class="multi-range-slider">
+                                    <input type="range" id="input-left" min="0" max="100" value="25">
+                                    <input type="range" id="input-right" min="0" max="100" value="75">
+                        
+                                    <div class="slider">
+                                        <div class="track"></div>
+                                        <div class="range"></div>
+                                        <div class="thumb left"></div>
+                                        <div class="thumb right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter__container--header">
+                            <button type="button" class="collapsible">Color</button>
+                            <div class="filter__container--arrow">&vee;</div>
+                        </div>
+                        <div class="filter__container--details">
+                            <div class="filter__colors">
+                                <div class="product__form--container"> <!--pages/product-->
+                                    <div class="product__form--colors">
+                                        <div class="js--product__form--colors product__form--colors-white"></div>
+                                        <div class="js--product__form--colors product__form--colors-black"></div>
+                                        <div class="js--product__form--colors product__form--colors-red"></div>
+                                        <div class="js--product__form--colors product__form--colors-green"></div>
+                                        <div class="js--product__form--colors product__form--colors-blue"></div>
+                                        <div class="js--product__form--colors product__form--colors-gray"></div>
+                                        <div class="js--product__form--colors product__form--colors-purple"></div>
+                                        <div class="js--product__form--colors product__form--colors-brown"></div>
+                                        <div class="js--product__form--colors product__form--colors-orange"></div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+
+                        <div class="filter__container--header">
+                            <button type="button" class="collapsible">Brand</button>
+                            <div class="filter__container--arrow">&vee;</div>
+                        </div>
+                        <div class="filter__container--details">
+                            <div class="filter__container--radio-group">
+                                <input type="radio" name="brand" value="l" id="lsize">
+                                <label for="lsize">L</label>
+                            </div>
+                            <div class="filter__container--radio-group">
+                                <input type="radio" name="brand" value="x" id="xsize">
+                                <label for="xsize">X</label>
+                            </div>
+                            <div class="filter__container--radio-group">
+                                <input type="radio" name="brand" value="xxl" id="xxlsize">
+                                <label for="xxlsize">XXL</label>
+                            </div>
+                            <div class="filter__container--radio-group">
+                                <input type="radio" name="brand" value="M" id="xsize">
+                                <label for="xsize">M</label>
+                            </div>
+                            <div class="filter__container--radio-group">
+                                <input type="radio" name="brand" value="onesize" id="onesize">
+                                <label for="onesize">One size</label>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <div class="col-3-of-4 filter__container--products">
+                        <div class="row">
+                            <div class="col-1-of-3">
+                                <a href="#" class="card">
+                                    <!--layouts/card-->
+                                    <div class="card__img--container">
+                                        <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                                        <span class="card__img--container-text">20%</span>
+                                    </div>
+                                    <div class="card__name"> Tara from the hell</div>
+                                    <div class="card__price">
+                                        <span class="card__price--discount">120$</span>
+                                        <span class="card__price--old"><del>150$</del></span>
+                                    </div>
+                                </a>
+                                <div class="card__stars">
+                                    <!--layouts/card-->
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                        <stop offset="50%" stop-color="white" />
+                                        <stop offset="50%" stop-color="grey" />
+                                    </svg>
+                                </div>
+                                <div class="card__cart--container">
+                                    <a href="#" class="btn btn--white btn--hover-red card__cart--container--btn">Add to cart</a>
+                                    <svg class="card__cart--container--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-heart-outlined"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-3">
+                                <a href="#" class="card">
+                                    <!--layouts/card-->
+                                    <div class="card__img--container">
+                                        <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                                        <span class="card__img--container-text">20%</span>
+                                    </div>
+                                    <div class="card__name"> Tara from the hell</div>
+                                    <div class="card__price">
+                                        <span class="card__price--discount">120$</span>
+                                        <span class="card__price--old"><del>150$</del></span>
+                                    </div>
+                                </a>
+                                <div class="card__stars">
+                                    <!--layouts/card-->
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                        <stop offset="50%" stop-color="white" />
+                                        <stop offset="50%" stop-color="grey" />
+                                    </svg>
+                                </div>
+                                <div class="card__cart--container">
+                                    <a href="#" class="btn btn--white btn--hover-red card__cart--container--btn">Add to cart</a>
+                                    <svg class="card__cart--container--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-heart-outlined"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-3">
+                                <a href="#" class="card">
+                                    <!--layouts/card-->
+                                    <div class="card__img--container">
+                                        <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                                        <span class="card__img--container-text">20%</span>
+                                    </div>
+                                    <div class="card__name"> Tara from the hell</div>
+                                    <div class="card__price">
+                                        <span class="card__price--discount">120$</span>
+                                        <span class="card__price--old"><del>150$</del></span>
+                                    </div>
+                                </a>
+                                <div class="card__stars">
+                                    <!--layouts/card-->
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                        <stop offset="50%" stop-color="white" />
+                                        <stop offset="50%" stop-color="grey" />
+                                    </svg>
+                                </div>
+                                <div class="card__cart--container">
+                                    <a href="#" class="btn btn--white btn--hover-red card__cart--container--btn">Add to cart</a>
+                                    <svg class="card__cart--container--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-heart-outlined"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-3">
+                                <a href="#" class="card">
+                                    <!--layouts/card-->
+                                    <div class="card__img--container">
+                                        <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                                        <span class="card__img--container-text">20%</span>
+                                    </div>
+                                    <div class="card__name"> Tara from the hell</div>
+                                    <div class="card__price">
+                                        <span class="card__price--discount">120$</span>
+                                        <span class="card__price--old"><del>150$</del></span>
+                                    </div>
+                                </a>
+                                <div class="card__stars">
+                                    <!--layouts/card-->
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                        <stop offset="50%" stop-color="white" />
+                                        <stop offset="50%" stop-color="grey" />
+                                    </svg>
+                                </div>
+                                <div class="card__cart--container">
+                                    <a href="#" class="btn btn--white btn--hover-red card__cart--container--btn">Add to cart</a>
+                                    <svg class="card__cart--container--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-heart-outlined"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-3">
+                                <a href="#" class="card">
+                                    <!--layouts/card-->
+                                    <div class="card__img--container">
+                                        <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                                        <span class="card__img--container-text">20%</span>
+                                    </div>
+                                    <div class="card__name"> Tara from the hell</div>
+                                    <div class="card__price">
+                                        <span class="card__price--discount">120$</span>
+                                        <span class="card__price--old"><del>150$</del></span>
+                                    </div>
+                                </a>
+                                <div class="card__stars">
+                                    <!--layouts/card-->
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                        <stop offset="50%" stop-color="white" />
+                                        <stop offset="50%" stop-color="grey" />
+                                    </svg>
+                                </div>
+                                <div class="card__cart--container">
+                                    <a href="#" class="btn btn--white btn--hover-red card__cart--container--btn">Add to cart</a>
+                                    <svg class="card__cart--container--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-heart-outlined"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-3">
+                                <a href="#" class="card">
+                                    <!--layouts/card-->
+                                    <div class="card__img--container">
+                                        <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                                        <span class="card__img--container-text">20%</span>
+                                    </div>
+                                    <div class="card__name"> Tara from the hell</div>
+                                    <div class="card__price">
+                                        <span class="card__price--discount">120$</span>
+                                        <span class="card__price--old"><del>150$</del></span>
+                                    </div>
+                                </a>
+                                <div class="card__stars">
+                                    <!--layouts/card-->
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                        <stop offset="50%" stop-color="white" />
+                                        <stop offset="50%" stop-color="grey" />
+                                    </svg>
+                                </div>
+                                <div class="card__cart--container">
+                                    <a href="#" class="btn btn--white btn--hover-red card__cart--container--btn">Add to cart</a>
+                                    <svg class="card__cart--container--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-heart-outlined"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-3">
+                                <a href="#" class="card">
+                                    <!--layouts/card-->
+                                    <div class="card__img--container">
+                                        <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                                        <span class="card__img--container-text">20%</span>
+                                    </div>
+                                    <div class="card__name"> Tara from the hell</div>
+                                    <div class="card__price">
+                                        <span class="card__price--discount">120$</span>
+                                        <span class="card__price--old"><del>150$</del></span>
+                                    </div>
+                                </a>
+                                <div class="card__stars">
+                                    <!--layouts/card-->
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                        <stop offset="50%" stop-color="white" />
+                                        <stop offset="50%" stop-color="grey" />
+                                    </svg>
+                                </div>
+                                <div class="card__cart--container">
+                                    <a href="#" class="btn btn--white btn--hover-red card__cart--container--btn">Add to cart</a>
+                                    <svg class="card__cart--container--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-heart-outlined"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-3">
+                                <a href="#" class="card">
+                                    <!--layouts/card-->
+                                    <div class="card__img--container">
+                                        <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                                        <span class="card__img--container-text">20%</span>
+                                    </div>
+                                    <div class="card__name"> Tara from the hell</div>
+                                    <div class="card__price">
+                                        <span class="card__price--discount">120$</span>
+                                        <span class="card__price--old"><del>150$</del></span>
+                                    </div>
+                                </a>
+                                <div class="card__stars">
+                                    <!--layouts/card-->
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                        <stop offset="50%" stop-color="white" />
+                                        <stop offset="50%" stop-color="grey" />
+                                    </svg>
+                                </div>
+                                <div class="card__cart--container">
+                                    <a href="#" class="btn btn--white btn--hover-red card__cart--container--btn">Add to cart</a>
+                                    <svg class="card__cart--container--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-heart-outlined"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="col-1-of-3">
+                                <a href="#" class="card">
+                                    <!--layouts/card-->
+                                    <div class="card__img--container">
+                                        <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                                        <span class="card__img--container-text">20%</span>
+                                    </div>
+                                    <div class="card__name"> Tara from the hell</div>
+                                    <div class="card__price">
+                                        <span class="card__price--discount">120$</span>
+                                        <span class="card__price--old"><del>150$</del></span>
+                                    </div>
+                                </a>
+                                <div class="card__stars">
+                                    <!--layouts/card-->
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                    <svg class="card__stars--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-star-full"></use>
+                                        <stop offset="50%" stop-color="white" />
+                                        <stop offset="50%" stop-color="grey" />
+                                    </svg>
+                                </div>
+                                <div class="card__cart--container">
+                                    <a href="#" class="btn btn--white btn--hover-red card__cart--container--btn">Add to cart</a>
+                                    <svg class="card__cart--container--svg">
+                                        <use xlink:href="../img/sprite.svg#icon-heart-outlined"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="filter__price--row">
-                    <div class="filter__price--row-label">max</div>
-                    <input type="text" class="filter__price--row-val" name="filter__price--max">
-                </div>
-            </div>
-
-            <hr>
-            
-            <h2 class="filter__label">The maximum receipt</h2>
-            <div class="filter__price">
-                <div class="filter__price--row">
-                    <div class="filter__price--row-label">Day</div>
-                    <input type="number" class="filter__price--row-val filter__price--row-val2" name="filter__receipt--day" value="1">
-                </div>
-                <div class="filter__price--row">
-                    <div class="filter__price--row-label">Month</div>
-                    <input type="number" class="filter__price--row-val filter__price--row-val2" name="filter__receipt--month" value="1">
-                </div>
-            </div>
-
-            <div class="filter__buttons">
-                <div class="btn btn--red">Apply filter</div>
-                <div class="btn btn--white">Cancel</div>
             </div>
         </section>
 
 
+
+
+
+
+        <footer class="footer"> <!--layouts/footer-->
+
+            <div class="row">
+                
+                    <div class="footer__container footer__container-1">
+                        <div class="footer__container--img">
+                            <img src="../img/1.jpeg" class="footer__container--img-1"></img>
+                            <img src="../img/logo2.jpeg" class="footer__container--img-2"></img>
+                        </div>
+                        <div class="footer__copyright">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                            dummy text ever since the 1500s
+                        </div>
+                    </div>
+                
+                    <div class="footer__container">
+                        <h3 class="footer__header">Our services</h3>
+                        <div class="footer__navigation">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">Delivery information</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Shopping & return</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Special</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer__container">
+                        <h3 class="footer__header">My account</h3>
+                        <div class="footer__navigation">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">My order</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">My credit card</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">My address</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    
+                    <div class="footer__container">
+                        <h3 class="footer__header">Have a question ?</h3>
+                        <div class="footer__navigation">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">Aldaqahlia, Mansoura university</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">+01093894837487819</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">info@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </footer>
+
         <script src="../js/functionality.js"></script>
         <script src="../js/jquery.waypoints.min.js"></script>
+        <script src="../js/multiSlider.js"></script>
     </body>
 </html>

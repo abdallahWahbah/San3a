@@ -48,12 +48,12 @@
 
 // .sticky ~ .add,
 .sticky ~ .cart,
-.sticky ~ .filter,
 .sticky ~ .payment,
 .sticky ~ .profile
  {padding: 9rem 0 !important;} // 5rem : the height of the header + 4rem : the padding of each section
 .sticky ~ .product,
-.sticky ~.checkout
+.sticky ~.checkout,
+.sticky ~ .filter
  {padding: 9rem 0 0 0 !important; }
 .sticky ~ .add {padding: 9rem 0 4rem 0 !important;}
 
