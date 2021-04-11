@@ -81,9 +81,19 @@
 
             .middle
             {
-                // margin: 2rem;
                 width: 100%;
                 margin: 2rem auto;
+
+                @include respond(tab-land)
+                {
+                    width: 120%;
+                    transform: scale(.8) translateX(-20%);
+                }
+                @include respond(tab-port)
+                {
+                    width: 180%;
+                    transform: scale(.4) translateX(-50%);                    
+                }
             }
         }
         &--list
