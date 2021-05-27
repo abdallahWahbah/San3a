@@ -8,9 +8,11 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/png" href="../img/favicon.png">
         <link rel="stylesheet" href="../sass/main.scss">
         <link rel="stylesheet" href="../css/animate.compat.css">
+        <link rel="stylesheet" href="../css/Tutorials.css">
         
     </head>
     <body>
@@ -19,20 +21,20 @@
         <header class="header u__padding__right__left__medium">
         
             <!--pages/home-->
-            <img src="../img/logo3.jpeg" alt="San3a logo" class="logo">
+            <img src="../img/logo3.svg" alt="San3a logo" class="logo"> 
         
             <!--layouts/navigation-->
             <div class="navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
                     <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Tutorials</a></li>
+                    <li class="navigation__item"><a href="tutorials.html" class="navigation__link">Tutorials</a></li>
                     <li class="navigation__item"><a href="#" class="navigation__link">Categories</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Products</a></li>
+                    <li class="navigation__item"><a href="product.html" class="navigation__link">Products</a></li>
                 </ul>
             </div>
         
-            <a href="#" class="btn btn--white js__header--login">Login</a>
+            <a href="login.html" class="btn btn--white js__header--login">Login</a>
             <!--comp/button-->
         
             <div class="header__main--profile js--header__main--profile">
@@ -55,12 +57,12 @@
         
                     </form>
                 </a>
-                <a href="#" class="header__main--profile-link">
+                <a href="profile.html" class="header__main--profile-link">
                     <svg class="header__main--profile-likes">
                         <use xlink:href="../img/sprite.svg#icon-user"></use>
                     </svg>
                 </a>
-                <a href="#" class="header__main--profile-link">
+                <a href="cart.html" class="header__main--profile-link">
                     <svg class="header__main--profile-likes">
                         <use xlink:href="../img/sprite.svg#icon-cart"></use>
                     </svg>
@@ -75,7 +77,7 @@
 
         <section class="best__selling-page tutorials"> <!--pages/home, pages/tutorials-->
 
-            <h2 class="heading__secondary">Tutorials</h2>    <!--base/typo-->
+            <h2 class="heading__secondary">Video Gallery</h2>    <!--base/typo-->
 
             <div class="filter__container">
                 <!--components/search--> <!--modified in pages/home in best__Sellin-page class so that it fits most of the width-->
@@ -90,141 +92,184 @@
                 <a href="#"><div class="btn btn--red">Filter</div></a>
             </div>
 
-            <div class="row"><!--layouts/grid-->
-                <div class="col-1-of-3">
-                    <div class="tutorials__img--container">
-                        <img src="../img/4.jpg" alt="Video logo" class="tutorials__img">
+
+            <div class="Tutorials__videos__section"><!--css/Tutorial-->
+               
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
                     </div>
-                    <div class="tutorials__page__name">Page name</div>
-                    <p class="tutorials__paragraph">Sanعa website for handmade products</p>
-                    <p class="tutorials__paragraph">Omayma Gamal</p>
-                    <p class="tutorials__paragraph">24 million views</p>
-                </div>
-                <div class="col-1-of-3">
-                    <div class="tutorials__img--container">
-                        <img src="../img/5.jpg" alt="Video logo" class="tutorials__img">
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
                     </div>
-                    <div class="tutorials__page__name">Page name</div>
-                    <p class="tutorials__paragraph">Sanعa website for handmade products</p>
-                    <p class="tutorials__paragraph">Omayma Gamal</p>
-                    <p class="tutorials__paragraph">24 million views</p>
                 </div>
-                <div class="col-1-of-3">
-                    <div class="tutorials__img--container">
-                        <img src="../img/6.jpg" alt="Video logo" class="tutorials__img">
+
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
                     </div>
-                    <div class="tutorials__page__name">Page name</div>
-                    <p class="tutorials__paragraph">Sanعa website for handmade products</p>
-                    <p class="tutorials__paragraph">Omayma Gamal</p>
-                    <p class="tutorials__paragraph">24 million views</p>
-                </div>
-                <div class="col-1-of-3">
-                    <div class="tutorials__img--container">
-                        <img src="../img/7.jpg" alt="Video logo" class="tutorials__img">
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
                     </div>
-                    <div class="tutorials__page__name">Page name</div>
-                    <p class="tutorials__paragraph">Sanعa website for handmade products</p>
-                    <p class="tutorials__paragraph">Omayma Gamal</p>
-                    <p class="tutorials__paragraph">24 million views</p>
                 </div>
-                <div class="col-1-of-3">
-                    <div class="tutorials__img--container">
-                        <img src="../img/8.jpg" alt="Video logo" class="tutorials__img">
+
+
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
                     </div>
-                    <div class="tutorials__page__name">Page name</div>
-                    <p class="tutorials__paragraph">Sanعa website for handmade products</p>
-                    <p class="tutorials__paragraph">Omayma Gamal</p>
-                    <p class="tutorials__paragraph">24 million views</p>
-                </div>
-                <div class="col-1-of-3">
-                    <div class="tutorials__img--container">
-                        <img src="../img/9.jpg" alt="Video logo" class="tutorials__img">
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
                     </div>
-                    <div class="tutorials__page__name">Page name</div>
-                    <p class="tutorials__paragraph">Sanعa website for handmade products</p>
-                    <p class="tutorials__paragraph">Omayma Gamal</p>
-                    <p class="tutorials__paragraph">24 million views</p>
                 </div>
-                <div class="col-1-of-3">
-                    <div class="tutorials__img--container">
-                        <img src="../img/1.jpg" alt="Video logo" class="tutorials__img">
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
                     </div>
-                    <div class="tutorials__page__name">Page name</div>
-                    <p class="tutorials__paragraph">Sanعa website for handmade products</p>
-                    <p class="tutorials__paragraph">Omayma Gamal</p>
-                    <p class="tutorials__paragraph">24 million views</p>
-                </div>
-                <div class="col-1-of-3">
-                    <div class="tutorials__img--container">
-                        <img src="../img/2.jpg" alt="Video logo" class="tutorials__img">
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
                     </div>
-                    <div class="tutorials__page__name">Page name</div>
-                    <p class="tutorials__paragraph">Sanعa website for handmade products</p>
-                    <p class="tutorials__paragraph">Omayma Gamal</p>
-                    <p class="tutorials__paragraph">24 million views</p>
                 </div>
-                <div class="col-1-of-3">
-                    <div class="tutorials__img--container">
-                        <img src="../img/3.jpg" alt="Video logo" class="tutorials__img">
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
                     </div>
-                    <div class="tutorials__page__name">Page name</div>
-                    <p class="tutorials__paragraph">Sanعa website for handmade products</p>
-                    <p class="tutorials__paragraph">Omayma Gamal</p>
-                    <p class="tutorials__paragraph">24 million views</p>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
                 </div>
-                
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
+                </div>
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
+                </div>
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
+                </div>
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
+                </div>
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
+                </div>
+
             </div>
+
+
+
         </section>
 
-        <footer class="footer">
-            <!--layouts/footer-->
-        
+        <footer class="footer"> <!--layouts/footer-->
+
             <div class="row">
-        
-                <div class="footer__container footer__container-1">
-                    <div class="footer__container--img">
-                        <img src="../img/1.jpeg" class="footer__container--img-1"></img>
-                        <img src="../img/logo2.jpeg" class="footer__container--img-2"></img>
+                
+                    <div class="footer__container footer__container-1">
+                        <div class="footer__container--img">
+                            <img src="../img/XMLID_43_.svg" class="footer__container--img-1"></img>
+                            <img src="../img/Group 4.svg" class="footer__container--img-2"></img>
+                        </div>
+                        <div class="footer__copyright">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                            dummy text ever since the 1500s
+                        </div>
                     </div>
-                    <div class="footer__copyright">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                        industry's standard
-                        dummy text ever since the 1500s
+                
+                    <div class="footer__container">
+                        <h3 class="footer__header">Our services</h3>
+                        <div class="footer__navigation">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">Delivery information</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Shopping & return</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">Special</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-        
-                <div class="footer__container">
-                    <h3 class="footer__header">Our services</h3>
-                    <div class="footer__navigation">
-                        <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">Delivery information</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Shopping & return</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Special</a></li>
-                        </ul>
+
+                    <div class="footer__container">
+                        <h3 class="footer__header">My account</h3>
+                        <div class="footer__navigation">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">My order</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">My credit card</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">My address</a></li>
+                            </ul>
+                        </div>
+                    </div>                
+                    
+                    <div class="footer__container">
+                        <h3 class="footer__header">Have a question ?</h3>
+                        <div class="footer__navigation">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">Aldaqahlia, Mansoura university</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">+01093894837487819</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">info@gmail.com</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-        
-                <div class="footer__container">
-                    <h3 class="footer__header">My account</h3>
-                    <div class="footer__navigation">
-                        <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">My order</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">My credit card</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">My address</a></li>
-                        </ul>
-                    </div>
-                </div>
-        
-                <div class="footer__container">
-                    <h3 class="footer__header">Have a question ?</h3>
-                    <div class="footer__navigation">
-                        <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">Aldaqahlia, Mansoura university</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">+01093894837487819</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">info@gmail.com</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </footer>
 

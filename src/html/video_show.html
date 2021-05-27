@@ -3,17 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Adding new item</title>
+        <title>Tutorials</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
         <link rel="shortcut icon" type="image/png" href="../img/favicon.png">
         <link rel="stylesheet" href="../sass/main.scss">
         <link rel="stylesheet" href="../css/animate.compat.css">
+        <link rel="stylesheet" href="../css/Tutorials.css">
+        <link rel="stylesheet" href="../css/video_show.css">
+        
     </head>
     <body>
-
+        
         <!--pages/home, base/utilities-->
         <header class="header u__padding__right__left__medium">
         
@@ -31,7 +35,7 @@
                 </ul>
             </div>
         
-            <a href="#" class="btn btn--white js__header--login">Login</a>
+            <a href="login.html" class="btn btn--white js__header--login">Login</a>
             <!--comp/button-->
         
             <div class="header__main--profile js--header__main--profile">
@@ -70,59 +74,116 @@
 
 
 
-
-
-        <section class="add"> <!--layouts/additem-->
-
-            <h1 class="add__welcome">Welcome to our store</h1>
-
-            <div class="add__container">
-                <h2 class="add__what">What will you add today?</h2>
-                <form action="#" class="add__form">
-                    <div class="add__form--two-items">
-                        <h3 class="add__form--text">Product name:</h3>
-                        <input type="text" class="add__form--input-normal" name="name">
-                    </div>
-
-                    <div class="add__form--two-items">
-                        <h3 class="add__form--text">Quantity:</h3>
-                        <input type="text" class="add__form--input-normal add__form--input-normal-big" name="quantity">
-                    </div>
-
-                    <div class="add__form--two-items">
-                        <h3 class="add__form--text">Price of the product:</h3>
-                        <input type="text" class="add__form--input-normal " name="price">
-                    </div>
-
-                    <div class="add__form--two-items">
-                        <h3 class="add__form--text">Specifications:</h3>
-                        <input type="text" class="add__form--input-normal add__form--input-normal-big" name="spec">
-                    </div>
-
-                    <div class="add__form--two-items">
-                        <h3 class="add__form--text">Implementation time:</h3>
-                        <input type="text" class="add__form--input-normal " name="time">
-                    </div>
-
-                    <div class="add__form--two-items">
-                        <h3 class="add__form--text">Delivery service:</h3>
-                        <input type="text" class="add__form--input-normal add__form--input-normal-big" name="delivery">
-                    </div>
-
-                    <div class="add__form--one-item">
-                        <label for="inputimage" class="add__form--text">Choose product picture:</label>
-                        <input type="file" class="add__form--input-big" name="image" accept="image/*" id="inputimage" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-                        <img src="../img/8.jpg" alt="product picture" id="blah">
-                    </div>
-
-                    <button class="btn btn--red add__button">Add product</button>
-                </form>
+        <section class="video__show"><!--css/video_show-->
+             
+            <div class="video">
+                <video src="" width="100%" height="350px" poster="" controls></video>
             </div>
-
+            <div class="text__video">
+                <p>Arabic Lorem Ipsum is the Arabic form of the latin text that is typically used by designers and developers as dummy text. This Arabic dummy text is used for various designs,</p>
+                <div class="video__icons">
+                    <p>Subscribe</p>
+                    <p>
+                        <i class="far fa-arrow-alt-circle-down"></i>
+                        <i class="fas fa-share"></i>
+                        <i class="far fa-thumbs-down"></i>
+                        <i class="far fa-thumbs-up"></i>
+                    </p>
+                </div>
+            </div>
+            
         </section>
 
 
+        <section class="best__selling-page tutorials"> <!--pages/home, pages/tutorials-->
 
+            <h3 class="header__related__video">Related Video</h3>    <!--css/video_show-->
+
+
+
+            <div class="Tutorials__videos__section"><!--css/Tutorial-->
+               
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
+                </div>
+
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
+                </div>
+
+
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
+                </div>
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
+                </div>
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
+                </div>
+
+                <div class="videos__Tutorials">
+                    <div class="video__img">
+                        <a  href="video_show.html" class="button__video">
+                            <i class="far fa-play-circle"></i>
+                        </a>
+                    </div>
+                    <div class="discription_video">
+                        <p>Video Presentation</p>
+                        <p>2:00</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </section>
 
 
         <footer class="footer"> <!--layouts/footer-->
@@ -175,8 +236,8 @@
             </div>
         </footer>
 
-
         <script src="../js/functionality.js"></script>
         <script src="../js/jquery.waypoints.min.js"></script>
+        
     </body>
 </html>

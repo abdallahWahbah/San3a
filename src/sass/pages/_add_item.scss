@@ -9,15 +9,17 @@
         font-size: 4rem;
         font-weight: 700;
         margin-bottom: 2rem;
-
+        
         @include respond(tab-land)
         {
+            // اقل من 1200 بكسل 
             font-size: 3rem;
             margin-bottom: 1.7rem;
         }
 
         @include respond(tab-port)
         {
+            // اقل من 900 بكسل
             font-size: 2.5rem;
             margin-bottom: 1.5rem;   
         }

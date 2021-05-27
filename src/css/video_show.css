@@ -1,0 +1,40 @@
+.video__show
+{
+    margin-top: 5rem;
+}
+.text__video
+{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+.text__video>p
+{
+    font-size: 1.2rem;
+    font-weight: 600;
+    word-spacing: .4rem;
+    margin-bottom: 1.5rem;
+}
+.video__icons
+{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.video__icons p
+{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.video__icons p:first-of-type
+{
+    color: firebrick;
+    cursor: pointer;
+}
+.video__icons p i
+{
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}

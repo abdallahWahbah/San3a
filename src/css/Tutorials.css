@@ -1,0 +1,51 @@
+.Tutorials__videos__section
+{
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+.videos__Tutorials
+{
+    margin-bottom: 2rem;   
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: auto;
+    box-shadow: 1px 1px 10px  rgba(94, 92, 92, 0.501);
+}
+.video__img
+{
+    width: 100%;
+    background-image: url(../img/5.jpg);
+    background-clip: content-box;
+    background-position: center center;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+}
+.video__img .button__video
+{
+    cursor: pointer;
+}
+.video__img .button__video i
+{
+    font-size: 5rem;
+    color: rgba(94, 92, 92, 0.501);
+}
+.discription_video
+{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.discription_video p
+{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
