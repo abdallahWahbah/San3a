@@ -44,8 +44,10 @@ if(checkoutClose)
     {
         if(checkoutClose)
         {
+            if(checkoutPage)
             checkoutPage.classList.remove("checkout--background");
             // checkoutPopup.style.transition = "all .2s ease-in-out";
+            if(checkoutPopup)
             checkoutPopup.style.transform = "translate(-50%, -50%) scale(0)";     
         }
     });
@@ -286,7 +288,7 @@ $(document).ready(function()
 
 
 // --------------------------- Header hide items --------------------------- 
-var loginState = "logged"; // logged - notLogged
+var loginState = "notLogged"; // logged - notLogged
 let headerHideItems = (element) =>
 {
     if(element)
@@ -318,10 +320,14 @@ else if(loginState === "logged")
 
 
 // --------------------------- Click on logo to go to the main page --------------------------- 
-document.querySelector(".logo").addEventListener("click", () =>
+if(document.querySelector(".logo"))
 {
-    location.href="./index.html"
-})
+    document.querySelector(".logo").addEventListener("click", () =>
+    {
+        location.href="./index.html"
+    })
+}
+
 
 
 
@@ -331,26 +337,29 @@ document.querySelector(".logo").addEventListener("click", () =>
 // --------------------------- Show (and hide) the search form --------------------------- 
 // --------------------------- change the svg search icon color --------------------------- 
 
-
-document.querySelector(".js--header__main--profile-link-search").addEventListener("click", (e) =>
+if(document.querySelector(".js--header__main--profile-link-search"))
 {
-    e.preventDefault();
-    let search =document.querySelector(".header__main--profile-link-search");
-    
-    if(e.target.matches(".js--header__main--profile-likes, .js--header__main--profile-likes *"))
+    document.querySelector(".js--header__main--profile-link-search").addEventListener("click", (e) =>
     {
-        if(search.style.display === "block")
+        e.preventDefault();
+        let search =document.querySelector(".header__main--profile-link-search");
+        
+        if(e.target.matches(".js--header__main--profile-likes, .js--header__main--profile-likes *"))
         {
-            search.style.display = "none";
-            document.querySelector(".js--header__main--profile-likes").style.fill="inherit";
+            if(search.style.display === "block")
+            {
+                search.style.display = "none";
+                document.querySelector(".js--header__main--profile-likes").style.fill="inherit";
+            }
+            else
+            {
+                search.style.display = "block";
+                document.querySelector(".js--header__main--profile-likes").style.fill="#d94141";
+            }
         }
-        else
-        {
-            search.style.display = "block";
-            document.querySelector(".js--header__main--profile-likes").style.fill="#d94141";
-        }
-    }
-});
+    });
+}
+
 
 // --------------------------- Profile page / change header svg profile icon color --------------------------- 
 
