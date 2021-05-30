@@ -9,13 +9,16 @@
   "author": "San3a team",
   "license": "ISC",
   "devDependencies": {
-    "babel-preset-env": "^1.7.0",
+    "cssnano": "^5.0.4",
+    "postcss": "^8.3.0",
     "sass": "^1.32.8"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "jquery": "^3.5.1",
     "node-sass": "^5.0.0",
     "nouislider": "^14.7.0",
-    "package.json": "^2.0.1"
+    "package.json": "^2.0.1",
+    "regenerator-runtime": "^0.13.7"
   }
 }

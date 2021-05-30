@@ -12,16 +12,6 @@
         <link rel="stylesheet" href="../sass/main.scss">
         <!-- <link rel="stylesheet" href="../../dist/main.31b31d70.css"> -->
         <link rel="stylesheet" href="../css/animate.compat.css">
-
-        <style>
-            img {
-                cursor: pointer;
-            }
-            .signup__logo--first
-            {
-                fill: white;
-            }
-        </style>
         
     </head>
     <body>
@@ -44,16 +34,21 @@
                         <h1 class="form__header">Welcome back</h1>
 
                         <div class="form__group">
-                            <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                            <input type="text" class="form__input form__input--login--name-js" placeholder="User name" id="name" required>
+                            <label for="name" class="form__label">User name</label>
+                        </div>
+
+                        <div class="form__group">
+                            <input type="email" class="form__input form__input--login--email-js" placeholder="Email address" id="email" required>
                             <label for="email" class="form__label">Email address</label>
                         </div>
 
                         <div class="form__group">
-                            <input type="password" class="form__input" placeholder="Password" id="password" required>
+                            <input type="password" class="form__input form__input--login--password-js" placeholder="Password" id="password" required>
                             <label for="password" class="form__label">Password</label>
                         </div>
 
-                        <button class="btn btn--red form__button">Login</button>
+                        <button class="btn btn--red form__button form__button--login-js">Login</button>
 
                         <a href="forget.html" class="form__forget">Fotget password?</a>
 
@@ -95,5 +90,6 @@
         </script>
         <script src="../js/jquery.waypoints.min.js"></script>
         <script src="../js/functionality.js"></script>
+        <script src="../js/controllers/login.js"></script>
     </body>
 </html>
