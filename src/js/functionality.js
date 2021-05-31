@@ -288,7 +288,8 @@ $(document).ready(function()
 
 
 // --------------------------- Header hide items --------------------------- 
-var loginState = "notLogged"; // logged - notLogged
+// var loginState = "notLogged"; // logged - notLogged
+let userToken = localStorage.getItem("token");
 let headerHideItems = (element) =>
 {
     if(element)
@@ -297,7 +298,8 @@ let headerHideItems = (element) =>
         element.classList.add("header__hide");
     }
 }
-if(loginState === "notLogged")
+// if(loginState === "notLogged")
+if(userToken === "")
 {
     // var profileNav = document.querySelector(".js--header__profile--nav");
     // var profileMain = document.querySelector(".js--header__main--profile");
@@ -309,7 +311,8 @@ if(loginState === "notLogged")
        headerHideItems(el);
     });
 }
-else if(loginState === "logged")
+// else if(loginState === "logged")
+else
 {
     var profileLogin = document.querySelector(".js__header--login");
     headerHideItems(profileLogin);
