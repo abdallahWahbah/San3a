@@ -3,10 +3,9 @@ import 'regenerator-runtime/runtime';
 
 export default class Login
 {
-    constructor(userName, userEmail, userPassword)
+    constructor(userName, userPassword)
     {
         this.userName = userName;
-        this.userEmail = userEmail;
         this.userPassword = userPassword;
         this.userToken = "";
     }
@@ -15,17 +14,21 @@ export default class Login
     {
         try
         {
-            let res = await axios({
-                method: 'post',
-                url: 'http://20.37.244.156/api/rest-auth/login/',
-                data: {
-                    username: this.userName,
-                    email: this.userEmail,
-                    password: this.userPassword
+            let res = await axios.post('https://cors-anywhere.herokuapp.com/http://20.37.244.156/auth-token/',
+            {
+                username: this.userName,
+                password: this.userPassword
+            }, 
+            {
+                headers: 
+                {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
                 }
             });
-            this.userToken = res.data.key;
-            // console.log(typeof(res.data.key), res.data.key);
+
+            this.userToken = res.data.token;
+            console.log(res.data.token);
         }
         catch(error)
         {

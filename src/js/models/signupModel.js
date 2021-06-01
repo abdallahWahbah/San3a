@@ -15,7 +15,7 @@ export default class Signup
     {
         try
         {
-            let res = await axios({
+            /*let res = await axios({
                 method: 'post',
                 url: 'http://20.37.244.156/api/rest-auth/registration/',
                 data: {
@@ -23,6 +23,21 @@ export default class Signup
                     email: this.userEmail,
                     password1: this.userPass1,
                     password2: this.userPass2
+                }
+            }); */
+            
+            let res = await axios.post('http://20.37.244.156/api/rest-auth/registration/',
+            {
+                username: this.userName,
+                email: this.userEmail,
+                password1: this.userPass1,
+                password2: this.userPass2
+            }, 
+            {
+                headers: 
+                {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
                 }
             });
             console.log(res);

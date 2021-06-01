@@ -2,11 +2,10 @@ import loginModel from '../models/loginModel';
 
 
 let loginName = document.querySelector(".form__input--login--name-js");
-let loginEmail = document.querySelector(".form__input--login--email-js");
 let loginPass = document.querySelector(".form__input--login--password-js");
 let loginButton = document.querySelector(".form__button--login-js");
 
-let userName = "", userEmail = "", userPass = "", userToken = "";
+let userName = "", userPass = "", userToken = "";
 
 loginButton.addEventListener("click", (e) =>
 {
@@ -36,19 +35,6 @@ const controlLogin = async () =>
         userName = loginName.value;
     }
 
-    // ------------------------------ email validation ------------------------------
-
-    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if(loginEmail.value.match(mailformat)) // valid email
-    {
-        changeLabelColorBorder(loginEmail, "Email address", "#333", "Email address", "3px solid #ccc");
-        userEmail = loginEmail.value;
-    }
-    else    // invalid email
-    {
-        changeLabelColorBorder(loginEmail, "Invalid email", "#d94141", "Invalid email", "3px solid #d94141");
-    }
-
     // ------------------------------ password validation ------------------------------
     
     if(loginPass.value.length < 6)
@@ -75,13 +61,13 @@ const controlLogin = async () =>
 
     // ------------------------------ Dealing with API ------------------------------
 
-    userName="abdallahMahmoud";
-    userEmail = "abdowahbah1234@yahoo.com";
-    userPass= "abdallahMahmoud";
+    // userName="abdo";
+    // userEmail = "abdowahbah1234@yahoo.com";
+    // userPass= "testpass123";
 
-    if( userName !="" && userEmail !="" &&  userPass !=="" )
+    if( userName !="" && userPass !=="" )
     {
-        let loginUser = new loginModel(userName, userEmail, userPass);
+        let loginUser = new loginModel(userName, userPass);
         try
         {
             await loginUser.login();
