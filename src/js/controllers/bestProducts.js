@@ -17,6 +17,7 @@ const getProducts = async () =>
         bestProductView.renderResults(productResults);
 
 
+        // next and prev buttons
         document.querySelector(".paggination").addEventListener("click", (e) =>
         {
             let btn = e.target.closest(".paggination__btn");
