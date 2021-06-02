@@ -110,41 +110,14 @@ const renderButton = (page, numResults, resPerPage) =>
 // type : 'prev' or 'next'
 const createButton = (page, type) =>
 {
-    // return `
-    //     <button class="paggination__btn paggination__${type}" data-goto=${type === 'prev' ? page-1 : page+1}>
-    //         <span class="paggination__number">page ${type === 'prev' ? page-1 : page+1}</span>
-    //         <svg class="paggination__svg">
-    //             <use xlink:href="img/sprite.svg#icon-triangle-${type === 'prev' ? 'left' : 'right'}"></use>
-    //         </svg>
-    //     </button>
-    // `;
-
-
-    // الكود الحقير اللي فوق مش بيرتب الكلام والصورة ... فهنرتبهم في كل حالة
-    
-    if(type === "next")
-    {
+        const span = `<span class="paggination__number">page ${type === 'prev' ? page-1 : page+1}</span>`;
         return `
             <button class="paggination__btn paggination__${type}" data-goto=${type === 'prev' ? page-1 : page+1}>
-                <span class="paggination__number">page ${type === 'prev' ? page-1 : page+1}</span>
-                <img src="img/sprite.svg#icon-triangle-left" alt="sprite"/>
-            </button>
-            `;
-                // <svg class="paggination__svg">
-                //     <use xlink:href="img/sprite.svg#icon-triangle-${type === 'prev' ? 'left' : 'right'}"></use>
-                // </svg>
-    }
-    else if(type === "prev")
-    {
-        return `
-            <button class="paggination__btn paggination__${type}" data-goto=${type === 'prev' ? page-1 : page+1}>
+                ${type === "next" ? span : ''}
                 <svg class="paggination__svg">
-                    <use xlink:href="img/sprite.svg#icon-triangle-${type === 'prev' ? 'left' : 'right'}"></use>
+                    <use xlink:href="sprite.svg#icon-triangle-${type === 'prev' ? 'left' : 'right'}"></use>
                 </svg>
-                <span class="paggination__number">page ${type === 'prev' ? page-1 : page+1}</span>
-                
+                ${type === "prev" ? span : ''}
             </button>
         `;
-    }
-
 }
