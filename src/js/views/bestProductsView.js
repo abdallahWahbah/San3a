@@ -4,31 +4,11 @@ export const clearResList = () =>
     document.querySelector(".paggination").innerHTML="";
 }
 
-export let renderProduct = (product) =>
+export let renderProduct = (product, parent = '.best__products--page-js') =>
 {
-    // if(product.bestseller === true)
-    // {
-    //     const markup = 
-    //     `
-    //         <div class="col-1-of-4">
-    //                     <a href="#" class="card" > <!--layouts/card-->
-    //                         <div class="card__img--container">
-    //                             <img src="${product.image}" alt="${product.description}" class="card__img--container-img">
-    //                             <!--
-    //                             <span class="card__img--container-text">20%</span>
-    //                             -->
-    //                         </div>
-    //                         <div class="card__name"> ${product.name}</div>
-    //                         <div class="card__price">
-    //                             <span class="card__price--discount">${product.price}$</span>
-    //                         </div>
-    //                     </a>
-    //                 </div>
-    //     `;
-
-    //     document.querySelector(".best__products--page-js").insertAdjacentHTML('afterbegin', markup);
-    // }
-    const markup = 
+    /*if(product.bestseller === true)
+    {
+        const markup = 
         `
             <div class="col-1-of-4">
                         <a href="#" class="card" > <!--layouts/card-->
@@ -47,13 +27,33 @@ export let renderProduct = (product) =>
         `;
 
         document.querySelector(".best__products--page-js").insertAdjacentHTML('afterbegin', markup);
+
+    }*/
+    
+    const markup = 
+        `
+            <div class="col-1-of-4 best__products--page-item-js" data-itemid = ${product.id}>
+                <a href="#" class="card" > <!--layouts/card-->
+                    <div class="card__img--container">
+                        <img src="${product.image}" alt="${product.description}" class="card__img--container-img">
+                        <!--
+                        <span class="card__img--container-text">20%</span>
+                        -->
+                    </div>
+                    <div class="card__name"> ${product.name}</div>
+                    <div class="card__price">
+                        <span class="card__price--discount">${product.price}$</span>
+                    </div>
+                </a>
+            </div>
+        `;
+
+    // document.querySelector('.best__products--page-js').insertAdjacentHTML('afterbegin', markup);
+    document.querySelector(parent).insertAdjacentHTML('afterbegin', markup);
+
     
 }
 
-// export let renderResults = (products) =>
-// {
-//     products.forEach((product) => renderProduct(product));
-// }
 
 
 // --------------------------------------paggination -------------------------------------------------
@@ -61,13 +61,7 @@ export let renderProduct = (product) =>
 
 
 
-
-
-
-
-
-
-export const renderResults = (products, page = 1, resPerPage = 10) =>
+export const renderResults = (products, page = 1, resPerPage = 12) =>
 {
     // render results 
     const start = (page-1) * resPerPage;

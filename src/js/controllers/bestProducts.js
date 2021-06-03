@@ -37,4 +37,12 @@ const getProducts = async () =>
     }
 }
 
+// handle clicking on product to move to product page
+document.querySelector(".best__products--page-js").addEventListener("click", (e) =>
+{
+    let id = e.target.closest(".best__products--page-item-js").dataset.itemid;
+    location.href = `product.html?id=${id}`;
+    // console.log(id, typeof(id));
+});
+
 getProducts();
