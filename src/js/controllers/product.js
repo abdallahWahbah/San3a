@@ -1,5 +1,6 @@
 import productModel from '../models/productModel';
 import bestProductsModel from '../models/bestProductsModel';
+import cartModel from '../models/cartModel';
 import * as productView from '../views/productView';
 import * as bestProductsView from '../views/bestProductsView';
 
@@ -44,9 +45,46 @@ const controlCartCLick = (product) =>
     document.querySelector(".product__cart").addEventListener("click", (e) =>
     {
         e.preventDefault();
-        let quantity = document.querySelector(".product__form--quantity-value").textContent;
-        location.href = `cart.html?id=${product.id}&name=${product.name}&quantity=${quantity}&price=${product.price}`;
-    
+        let quantity = document.querySelector(".product__form--quantity-value").textContent;    
+
+        // adding produt to cart list
+
+        let cartProducts = [];
+        let cartProductsssss = JSON.parse(localStorage.getItem('cartProducts'));
+        if(cartProductsssss == null)
+        {
+            console.log("empty localStorage");
+            cartProducts.push(product);
+        } 
+        else
+        {
+            cartProducts.push(product);
+            cartProductsssss.forEach(current =>
+            {
+                cartProducts.push(current);
+            }); 
+        }
+        
+
+        // removing duplication
+        const filteredArr = cartProducts.reduce((acc, current) => {
+        const x = acc.find(item => item.id === current.id);
+        if (!x) {
+            return acc.concat([current]);
+        } else {
+            return acc;
+        }
+        }, []);
+
+        filteredArr.sort(function(a, b){return a.id - b.id});
+
+        // adding produt to cart list
+        localStorage.setItem("cartProducts", JSON.stringify(filteredArr));
+        cartProducts = JSON.parse(localStorage.getItem('cartProducts'));
+        console.log(cartProducts);        
+
+        location.href = `cart.html?quantity=${quantity}`;
+
     });
 }
 
