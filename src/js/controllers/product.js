@@ -154,3 +154,14 @@ let sortProducts = (product, products) =>
     // console.log(filteredArr);
     return filteredArr;
 }
+
+
+// click on any related product to preview it instead of the present one
+document.querySelector(".product__related--js").addEventListener("click", (e) =>
+{
+    // get related item id when you click on it
+    const relatedID = e.target.closest(".best__products--page-item-js").dataset.itemid;
+    console.log(relatedID);
+
+    location.href = `product.html?id=${relatedID}`;
+});
