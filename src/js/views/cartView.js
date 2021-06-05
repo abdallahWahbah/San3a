@@ -68,8 +68,9 @@ const limitDescription = (desc, limit = 100) =>
     // return desc;
 }
 
-export const renderCartTotalButtons = () =>
+export const renderCartTotalButtons = (oneProductTotalPrice) =>
 {
+    totalPrice -= oneProductTotalPrice;
     let markup =
     `
         <div class="cart__total">
@@ -90,5 +91,11 @@ export const renderCartTotalButtons = () =>
 export const deleteItem = id =>
 {
     const item = document.querySelector(`[data-itemid="${id}"]`);
+    item.parentElement.removeChild(item);
+}
+
+export const deleteButtons = () =>
+{
+    const item = document.querySelector(".cart__total");
     item.parentElement.removeChild(item);
 }

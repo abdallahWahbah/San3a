@@ -9,7 +9,7 @@ products.forEach(currentProduct =>
     cartView.renderProduct(currentProduct);  
 })
 
-cartView.renderCartTotalButtons();
+cartView.renderCartTotalButtons(0);
 
 
 document.querySelector(".cart__page--js").addEventListener("click", (e) =>
@@ -24,9 +24,20 @@ document.querySelector(".cart__page--js").addEventListener("click", (e) =>
     console.log("id: " + id);
     
 
+    // handle delete button for each product
     if(e.target.matches(".cart__item--delete"))
     {
+
+        // get product total price to delete it from the totals
+        const productTotalPrices = document.querySelector(`[data-itemid="${id}"] .cart__item__typo--container .cart__item--total`).textContent;
+        // console.log(parseInt(productTotalPrices))
+
+
         deleteItem(id);
+
+        // delete buttons and render them again to refrech the totals
+        cartView.deleteButtons();
+        cartView.renderCartTotalButtons(parseInt(productTotalPrices));
     }
 });
 
