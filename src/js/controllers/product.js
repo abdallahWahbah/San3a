@@ -1,6 +1,6 @@
 import productModel from '../models/productModel';
 import bestProductsModel from '../models/bestProductsModel';
-import cartModel from '../models/cartModel';
+// import cartModel from '../models/cartModel';
 import * as productView from '../views/productView';
 import * as bestProductsView from '../views/bestProductsView';
 
