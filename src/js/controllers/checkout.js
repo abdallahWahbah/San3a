@@ -83,9 +83,9 @@ let deleteItem = (id) =>
     const index = products.findIndex (el => el.id === parseInt(id));
     products.splice(index, 1);
 
-    // save the new products in the cart to "cartProducts" local storage
-    localStorage.setItem("cartProducts", JSON.stringify(products));
-
+    // save the new products in the checkoutList to "checkout" local storage
+    // localStorage.setItem("cartProducts", JSON.stringify(products));
+    localStorage.setItem("checkout", JSON.stringify(products));
     // remove the product from UI
     checkoutView.deleteItem(parseInt(id));
 }

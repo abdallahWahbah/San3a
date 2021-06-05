@@ -76,14 +76,14 @@
             <div class="profile__main">
                 <img src="../img/profile.jpg" alt="Main profile picture" class="profile__main--img">
                 <div class="profile__main--personal">
-                    <h1 class="profile__main--name">Unknown person</h1>
+                    <!-- <h1 class="profile__main--name">Unknown person</h1>
                     <h3 class="profile__main--email">person@email.com</h3>
-                    <a class="btn btn--white profile__main--edit">Edit profile</a>
+                    <a class="btn btn--white profile__main--edit">Edit profile</a> -->
                 </div>
             </div>
 
             <div class="profile__clicks">
-                <a href="#" class="profile__clicks--container">
+                <a class="profile__clicks--container profile__clicks--header-orders">
                     <h1 class="profile__clicks--header">Orders</h1>
                     <span class="profile__clicks--arrow">&gt;</span>
                 </a>
@@ -142,6 +142,27 @@
                     <span class="profile__clicks--arrow">&gt;</span>
                 </a>
             </div>
+
+
+            <!-- when you press orders, show the orders here >>>>> i just copied this HTML from another page-->
+            <section class="checkout" >
+
+                <div class="row js--offers checkout__related--products profile__checkout"> 
+                    <!-- <div class="col-1-of-4">
+                        <a href="#" class="card" > 
+                            <div class="card__img--container">
+                                <img src="../img/1.jpg" alt="product" class="card__img--container-img">
+                            </div>
+                            <div class="card__name"> Tara from the hell</div>
+                            <div class="card__price">
+                                <span class="card__price--discount">120$</span>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+            </section>
+            
+
         </section>
 
 
@@ -206,6 +227,7 @@
 
         <script src="../js/functionality.js"></script>
         <script src="../js/jquery.waypoints.min.js"></script>
+        <script src="../js/controllers/profile.js"></script>
         
     </body>
 </html>
