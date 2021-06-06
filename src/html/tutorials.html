@@ -79,143 +79,33 @@
 
             <h2 class="heading__secondary">Video Gallery</h2>    <!--base/typo-->
 
+            <!--components/search-->    <!--modified in pages/home in best__Sellin-page class so that it fits most of the width-->
             <div class="filter__container">
-                <!--components/search--> <!--modified in pages/home in best__Sellin-page class so that it fits most of the width-->
                 <form class="search">
-                    <input type="text" class="search__input" placeholder="search....">
-                    <button class="search__button">
+                    <input type="text" class="search__input tutorials__search--input-js" placeholder="search by name....">
+                    <button class="search__button tutorials__page--search">
                         <svg class="search__icon">
                             <use xlink:href="../img/sprite.svg#icon-magnifying-glass"></use>
                         </svg>
                     </button>
                 </form>
-                <a href="#"><div class="btn btn--red">Filter</div></a>
+                <a class="tutorials__page--filter"><div class="btn btn--red">Filter</div></a>
             </div>
 
 
-            <div class="Tutorials__videos__section"><!--css/Tutorial-->
+            <div class="Tutorials__videos__section Tutorials__videos__section--js"><!--css/Tutorial-->
                
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
+
+                <!-- <div class="video__container" >
+                    <video id="myVideo" class = "video__container--video" controls>
+                        <source src="https://cdn.videvo.net/videvo_files/video/free/2013-08/small_watermarked/hd0903_preview.webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="discription_video" data-itemid = "0">
                         <p>Video Presentation</p>
-                        <p>2:00</p>
                     </div>
-                </div>
+                </div> -->
 
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
-
-
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
 
             </div>
 
@@ -275,6 +165,7 @@
 
         <script src="../js/functionality.js"></script>
         <script src="../js/jquery.waypoints.min.js"></script>
-        
+        <script src="../js/controllers/tutorials.js"></script>
+
     </body>
 </html>

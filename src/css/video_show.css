@@ -1,6 +1,6 @@
 .video__show
 {
-    margin-top: 5rem;
+    padding: 4rem 0 0 0;
 }
 .text__video
 {
@@ -37,4 +37,10 @@
     cursor: pointer;
     font-size: 1.5rem;
     margin-left: 2rem;
+}
+
+.video__description--paragraph, .video__related
+{
+    font-size: 1.7rem !important;
+    margin-bottom: 3rem !important;
 }

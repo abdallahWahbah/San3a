@@ -14,6 +14,9 @@ export default class Login
     {
         try
         {
+            // var form = new FormData();
+            // form.append("username", this.userName);
+            // form.append("password", this.userPassword);
             let res = await axios.post('https://cors-anywhere.herokuapp.com/http://20.37.244.156/auth-token/',
             {
                 // username: "san3a",
@@ -21,6 +24,7 @@ export default class Login
                 username: this.userName,
                 password: this.userPassword
             }, 
+            // form,
             {
                 headers: 
                 {

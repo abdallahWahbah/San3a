@@ -73,7 +73,7 @@
 
 
 
-        <section class="add"> <!--layouts/additem-->
+        <section class="add"> <!--pages/additem-->
 
             <h1 class="add__welcome">Welcome to our store</h1>
 
@@ -82,41 +82,41 @@
                 <form action="#" class="add__form">
                     <div class="add__form--two-items">
                         <h3 class="add__form--text">Product name:</h3>
-                        <input type="text" class="add__form--input-normal" name="name">
+                        <input type="text" class="add__form--input-normal add__item--name-js" name="name">
                     </div>
 
                     <div class="add__form--two-items">
                         <h3 class="add__form--text">Quantity:</h3>
-                        <input type="text" class="add__form--input-normal add__form--input-normal-big" name="quantity">
+                        <input type="text" class="add__form--input-normal add__form--input-normal-big add__item--quantity-js" name="quantity">
                     </div>
 
                     <div class="add__form--two-items">
                         <h3 class="add__form--text">Price of the product:</h3>
-                        <input type="text" class="add__form--input-normal " name="price">
+                        <input type="text" class="add__form--input-normal add__item--price-js" name="price">
                     </div>
 
                     <div class="add__form--two-items">
                         <h3 class="add__form--text">Specifications:</h3>
-                        <input type="text" class="add__form--input-normal add__form--input-normal-big" name="spec">
+                        <input type="text" class="add__form--input-normal add__form--input-normal-big add__item--spec-js" name="spec">
                     </div>
 
                     <div class="add__form--two-items">
                         <h3 class="add__form--text">Implementation time:</h3>
-                        <input type="text" class="add__form--input-normal " name="time">
+                        <input type="text" class="add__form--input-normal add__item--time-js" name="time">
                     </div>
 
                     <div class="add__form--two-items">
                         <h3 class="add__form--text">Delivery service:</h3>
-                        <input type="text" class="add__form--input-normal add__form--input-normal-big" name="delivery">
+                        <input type="text" class="add__form--input-normal add__form--input-normal-big add__item--delivery-js" name="delivery">
                     </div>
 
                     <div class="add__form--one-item">
-                        <label for="inputimage" class="add__form--text">Choose product picture:</label>
-                        <input type="file" class="add__form--input-big" name="image" accept="image/*" id="inputimage" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                        <label for="inputimage" class="add__form--text add__form--text-choose">Click here to choose product picture:</label>
+                        <input type="file" class="add__form--input-big add__item--picture" name="image" accept="image/*" id="inputimage" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                         <img src="../img/8.jpg" alt="product picture" id="blah">
                     </div>
 
-                    <button class="btn btn--red add__button">Add product</button>
+                    <button class="btn btn--red add__button additem__page--add-product-js">Add product</button>
                 </form>
             </div>
 
@@ -179,5 +179,6 @@
 
         <script src="../js/functionality.js"></script>
         <script src="../js/jquery.waypoints.min.js"></script>
+        <script src="../js/controllers/addItem.js"></script>
     </body>
 </html>

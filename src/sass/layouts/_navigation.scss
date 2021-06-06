@@ -55,7 +55,8 @@
 .sticky ~.checkout,
 .sticky ~ .filter
  {padding: 9rem 0 0 0 !important; }
-.sticky ~ .add {padding: 9rem 0 4rem 0 !important;}
+.sticky ~ .add, .sticky ~ .video__show
+{padding: 9rem 0 4rem 0 !important;}
 
 
 

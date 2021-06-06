@@ -77,10 +77,13 @@
         <section class="video__show"><!--css/video_show-->
              
             <div class="video">
-                <video src="" width="100%" height="350px" poster="" controls></video>
+                <!-- <video id="myVideo" class="video__container--video" controls>
+                    <source src="https://media.istockphoto.com/videos/young-woman-on-white-bed-knitting-in-bedroom-video-id1213148776">
+                    Your browser does not support the video tag.
+                </video> -->
             </div>
             <div class="text__video">
-                <p>Arabic Lorem Ipsum is the Arabic form of the latin text that is typically used by designers and developers as dummy text. This Arabic dummy text is used for various designs,</p>
+                <!-- <p class="video__description--paragraph">Arabic Lorem Ipsum is the Arabic form of the latin text that is typically used by designers and developers as dummy text. This Arabic dummy text is used for various designs,</p> -->
                 <div class="video__icons">
                     <p>Subscribe</p>
                     <p>
@@ -97,91 +100,32 @@
 
         <section class="best__selling-page tutorials"> <!--pages/home, pages/tutorials-->
 
-            <h3 class="header__related__video">Related Video</h3>    <!--css/video_show-->
+            <h3 class="header__related__video video__related">Related Video</h3>    <!--css/video_show-->
 
-
-
-            <div class="Tutorials__videos__section"><!--css/Tutorial-->
+            <div class="Tutorials__videos__section video__show--related-js"><!--css/Tutorial-->
                
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
+                <!-- <div class="video__container" >
+                    <video id="myVideo" class = "video__container--video" controls>
+                        <source src="https://media.istockphoto.com/videos/young-woman-on-white-bed-knitting-in-bedroom-video-id1213148776">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="discription_video" data-itemid = "0">
                         <p>Video Presentation</p>
-                        <p>2:00</p>
                     </div>
                 </div>
 
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
+                <div class="video__container">
+                    <video id="myVideo" class="video__container--video" controls>
+                        <source src="https://media.istockphoto.com/videos/young-woman-on-white-bed-knitting-in-bedroom-video-id1213148776">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="discription_video" data-itemid="0">
                         <p>Video Presentation</p>
-                        <p>2:00</p>
                     </div>
-                </div>
-
-
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
-
-                <div class="videos__Tutorials">
-                    <div class="video__img">
-                        <a  href="video_show.html" class="button__video">
-                            <i class="far fa-play-circle"></i>
-                        </a>
-                    </div>
-                    <div class="discription_video">
-                        <p>Video Presentation</p>
-                        <p>2:00</p>
-                    </div>
-                </div>
+                </div> -->
 
 
             </div>
-
-
 
         </section>
 
@@ -238,6 +182,7 @@
 
         <script src="../js/functionality.js"></script>
         <script src="../js/jquery.waypoints.min.js"></script>
+        <script src="../js/controllers/videoShow.js"></script>
         
     </body>
 </html>
