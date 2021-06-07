@@ -226,3 +226,16 @@ document.querySelector(".filter__price--container-filter").addEventListener("cli
         console.log(filteredPriceList);
     }
 });
+
+
+// filter by categories
+document.querySelector(".filter__cat--page-js").addEventListener("click", (e) =>
+{
+    let category = e.target.closest(".filter__container--link").textContent;
+    if(category.includes("%20"))
+    {
+        category.replace("%20", "");
+    }
+    location.href = `filter.html?category=${category}`;
+    console.log(cat);
+})
