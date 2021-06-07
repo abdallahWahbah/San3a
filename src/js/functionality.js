@@ -322,6 +322,7 @@ else
 
 
 
+
 // --------------------------- Click on logo to go to the main page --------------------------- 
 if(document.querySelector(".logo"))
 {
@@ -476,4 +477,19 @@ if(collapsibles)
             }
         });
     }
+}
+
+
+
+// --------------------------- filter page / collapsible button--------------------------- 
+
+
+if(document.querySelector(".header__search--js"))
+{
+    document.querySelector(".header__search--js").addEventListener("click", () =>
+    {
+        let input = document.querySelector(".header__search--input-js").value;
+        location.href = `filter.html?input=${input}`;
+        console.log(input);
+    });
 }

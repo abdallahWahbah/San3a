@@ -11,6 +11,12 @@
     background-size: cover;
     background-position: center;
 
+    @include respond(tab-port)
+    {
+      min-width: 60vh;
+    }
+
+
     h1,
     p 
     {

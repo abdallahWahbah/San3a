@@ -257,3 +257,91 @@
         font-size: 1.6rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// related to index.html >>>> top categories
+.story{
+
+    height: 20rem;
+    border-radius: 3px;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    font-size: $default-font-size;
+    overflow: hidden;
+
+    &__shape
+    {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 50%;
+
+    }
+    &__img
+    {
+        width: 100%;
+        height: 100%;
+        transform: scale(1.2);
+        transition: all .5s;
+    }
+    &__caption
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden; // to avoid the caption shaking at the end of the translate
+    }
+    &:hover &__caption
+    {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    &:hover &__img
+    {
+        transform: scale(1);
+        filter: blur(3px) brightness(80%);       // below 100% makes it darker, above 100% makes it brighter
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.out__products--load-more-js,
+.card__cart--container--btn,
+.our__products--product-card,
+.card__cart--container--svg,
+.category--index-js,
+.header__search--js
+{cursor: pointer;}
