@@ -182,3 +182,20 @@
         background: #555;
     }
 }
+
+
+
+
+
+.filter__price--container
+{
+    font-size: 1.6rem;
+    font-weight: bold;
+    
+    display: flex;
+    justify-content: space-between;
+
+    &-filter{cursor: pointer;color: $color-primary;}
+
+
+}

@@ -1,4 +1,3 @@
-
 export let renderProduct = (product) =>
 {
     let markup =
@@ -10,7 +9,7 @@ export let renderProduct = (product) =>
                 </div>
                 <div class="card__name">${product.name}</div>
                 <div class="card__price">
-                    <span class="card__price--discount">120$</span>
+                    <span class="card__price--discount">${product.price}$</span>
                 </div>
             </a>
             <div class="card__cart--container">

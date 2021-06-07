@@ -57,10 +57,7 @@ document.querySelector(".our__products--index-js").addEventListener("click", (e)
 
         // get the product and pass it to cart page
         controlProduct(cartItemID);
-        
-
     }
-    
 });
 
 

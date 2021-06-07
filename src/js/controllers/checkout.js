@@ -124,7 +124,7 @@ const getProducts = async (productData) =>
     }
 }
 
-// get products that relates to the product
+// get products that relates to the product (sort by tags)
 let sortProducts = (product, products) =>
 {
     let finalProducts = [];
