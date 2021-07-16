@@ -75,6 +75,7 @@ const controlLogin = async () =>
 
             // go to the home page
             window.location.href="./index.html";
+            // console.log(userName, userPass);
 
             // save the token to the local storage so that you can use it in multiple pages
             localStorage.setItem("token", userToken);

@@ -27,13 +27,6 @@
 
 .heading__secondary
 {
-    // background-image:linear-gradient(to right,
-    //                                 rgba($color-primary-light, .8),
-    //                                 rgba($color-primary-dark, .8));
-    // -webkit-background-clip: text;
-    // background-clip: text;
-    // color: transparent;
-
     color: $color-secondary;
 
     // text-transform: uppercase;
@@ -43,14 +36,6 @@
     font-weight: 700;
     display: inline-block;
     border-bottom: 3px solid $color-grey-dark-2;
-    // transition: all .2s;
-
-    // &:hover
-    // {
-    //     transform: skewY(2deg) skewX(15deg) scale(1.1);
-    //     text-shadow: $shadow-dark;
-    // }
-
 
     @include respond(tab-land)
     {

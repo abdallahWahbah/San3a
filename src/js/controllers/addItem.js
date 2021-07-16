@@ -34,9 +34,6 @@ document.querySelector(".additem__page--add-product-js").addEventListener("click
     let itemDeliveryService = document.querySelector(".add__item--delivery-js").value;  // we will treat this as slug
     let itemImage = document.querySelector(".add__item--picture");
 
-
-    
     controlAddItem();
-
 
 });

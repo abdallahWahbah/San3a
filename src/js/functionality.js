@@ -290,6 +290,9 @@ $(document).ready(function()
 // --------------------------- Header hide items --------------------------- 
 // var loginState = "notLogged"; // logged - notLogged
 let userToken = localStorage.getItem("token");
+// userToken="ed49fcef354fba7c1bcdba960562f47e255231f3"; // user: san3a , pass: testpass123 // wrong one
+userToken="d2148cee0a3e6cce398efa66322c6da69fba69a0"; // user: san3a , pass: testpass123
+localStorage.setItem("token", userToken);
 let headerHideItems = (element) =>
 {
     if(element)
